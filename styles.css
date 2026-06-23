@@ -716,3 +716,364 @@ ul,ol{list-style:none}
   .scroll-progress{display:none}
   .badge__dot{animation:none}
 }
+
+/* ================================================================
+   NEW PREMIUM DESIGN ELEMENTS & ENHANCEMENTS
+   ================================================================ */
+
+/* ---- Ambient Aurora Blobs ---- */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80vw;
+  height: 50vw;
+  background: radial-gradient(circle, rgba(0,209,255,0.08) 0%, rgba(255,184,0,0.03) 50%, rgba(255,255,255,0) 70%);
+  filter: blur(80px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+#earnings-calculator::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0,209,255,0.06) 0%, rgba(255,255,255,0) 70%);
+  filter: blur(60px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ---- Glassmorphic Photo Frames ---- */
+.glass-photo-frame {
+  position: relative;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  padding: 16px;
+  border-radius: var(--r-xl);
+  box-shadow: 0 20px 50px rgba(10, 10, 11, 0.08);
+  transition: transform var(--t-med) var(--ease), box-shadow var(--t-med) var(--ease);
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.glass-photo-frame--rot {
+  transform: rotate(2deg);
+}
+
+.glass-photo-frame:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0, 209, 255, 0.15);
+}
+
+.glass-photo-frame--rot:hover {
+  transform: translateY(-8px) rotate(-1deg) scale(1.02);
+}
+
+.problem-photo, .final-photo {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  border-radius: var(--r-lg);
+  background: var(--surface-dim);
+}
+
+.photo-badge {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary);
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border-radius: var(--r-full);
+  box-shadow: 0 4px 12px rgba(10, 10, 11, 0.25);
+  white-space: nowrap;
+}
+
+/* ---- Problem Section Left Row ---- */
+.problem-instructor-row {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-top: 32px;
+  border-top: 1px solid var(--surface-variant);
+  padding-top: 32px;
+}
+
+.problem-cta-box {
+  background: var(--surface-card);
+  padding: 24px;
+  border-radius: var(--r-lg);
+  border: 1px solid var(--surface-variant);
+  box-shadow: var(--shadow);
+  flex: 1;
+}
+
+.problem-cta-box p {
+  margin-bottom: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* ---- Interactive ROI Calculator ---- */
+.calculator-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.calculator-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  background: var(--surface-card);
+  border: 1px solid var(--surface-variant);
+  border-radius: var(--r-xl);
+  padding: 48px;
+  box-shadow: var(--shadow-hover);
+  position: relative;
+  overflow: hidden;
+}
+
+.calculator-grid::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--accent), var(--warning));
+}
+
+.calculator-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.calculator-slider-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.slider-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--primary);
+}
+
+.slider-value {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--accent-dark);
+  background: rgba(0, 209, 255, 0.08);
+  padding: 4px 12px;
+  border-radius: var(--r);
+}
+
+.range-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: var(--r-full);
+  background: var(--surface-dim);
+  outline: none;
+  transition: background .2s;
+}
+
+.range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--accent-dark);
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--accent-glow);
+  transition: transform 0.15s ease;
+}
+
+.range-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.range-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--accent-dark);
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--accent-glow);
+  transition: transform 0.15s ease;
+}
+
+.range-slider::-moz-range-thumb:hover {
+  transform: scale(1.2);
+}
+
+.calculator-results {
+  background: var(--primary);
+  color: #fff;
+  border-radius: var(--r-lg);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  box-shadow: 0 15px 35px rgba(10, 10, 11, 0.2);
+}
+
+.result-box {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 20px;
+}
+
+.result-amount {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-top: 8px;
+  letter-spacing: -0.02em;
+}
+
+.result-details {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.result-detail-item {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+}
+
+/* ---- Smooth FAQ Accordion (div-based) ---- */
+.accordion__body-wrapper {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.accordion__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion__header {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--primary);
+  background: transparent;
+  border: none;
+  transition: color 0.25s ease;
+}
+
+.accordion__header:hover {
+  color: var(--accent-dark);
+}
+
+.accordion__item.is-active .accordion__chevron {
+  transform: rotate(180deg);
+  color: var(--accent);
+}
+
+.accordion__body {
+  padding: 0 24px 20px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--on-surface-variant);
+}
+
+/* ---- Final CTA Section Grid ---- */
+.final-cta-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 64px;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.final-cta__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.final-cta__content .heading-xl {
+  text-align: left;
+}
+
+.final-cta__content .cta-pair {
+  justify-content: flex-start;
+  width: 100%;
+}
+
+/* ---- Responsiveness for New Layouts ---- */
+@media(max-width: 1024px) {
+  .calculator-grid {
+    grid-template-columns: 1fr;
+    padding: 32px;
+  }
+  .final-cta-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  .final-cta__content {
+    align-items: center;
+  }
+  .final-cta__content .heading-xl {
+    text-align: center;
+  }
+  .final-cta__content .cta-pair {
+    justify-content: center;
+  }
+}
+
+@media(max-width: 768px) {
+  .problem-instructor-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  .problem-cta-box {
+    width: 100%;
+    text-align: center;
+  }
+  .glass-photo-frame {
+    max-width: 260px;
+  }
+}

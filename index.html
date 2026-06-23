@@ -134,6 +134,16 @@
           <p class="body-lg text-muted">
             None of that is your fault. No one ever sat you down and showed you the path, step by step, in plain language, from the very beginning. That is exactly what this course is.
           </p>
+          <div class="problem-instructor-row">
+            <div class="glass-photo-frame">
+              <img src="images/my-pics/photo.jpg" alt="Muddassir Ali" class="problem-photo" loading="lazy">
+              <div class="photo-badge">Meet Your Mentor</div>
+            </div>
+            <div class="problem-cta-box">
+              <p class="body-md">Stop feeling left behind. Learn practical skills that convert to income.</p>
+              <a class="btn btn--accent btn--md" href="PAYMENT_LINK_HERE" target="_blank" rel="noopener noreferrer">Start Learning Now</a>
+            </div>
+          </div>
         </div>
         <div class="bento-grid__right reveal-group">
           <div class="pain-card">
@@ -192,6 +202,9 @@
           <h3 class="heading-md">Honest</h3>
           <p class="body-md text-muted">No fake income promises. No surprise upsell.</p>
         </div>
+      </div>
+      <div class="container text-center reveal-group" style="margin-top:40px;">
+        <a class="btn btn--primary btn--lg" href="PAYMENT_LINK_HERE" target="_blank" rel="noopener noreferrer">Enroll Today — Join Live</a>
       </div>
     </section>
 
@@ -404,6 +417,63 @@
     </section>
 
     <!-- ================================================================
+         10.5 · INTERACTIVE CALCULATOR
+         ================================================================ -->
+    <section class="section section--surface section--bordered" id="earnings-calculator">
+      <div class="container calculator-container reveal-group">
+        <div class="calculator-grid">
+          <div class="calculator-settings">
+            <span class="eyebrow text-accent">Interactive ROI Tool</span>
+            <h2 class="heading-xl">Calculate Your Earning Potential</h2>
+            <p class="body-lg text-muted">
+              Estimate your monthly revenue from freelancing by adjusting the sliders below. See how quickly learning these AI skills can pay back your ₹2,999 course investment!
+            </p>
+            
+            <div class="calculator-slider-group">
+              <div class="slider-header">
+                <span class="slider-label">Freelance Projects / Clients per Month</span>
+                <span class="slider-value" id="client-val">2</span>
+              </div>
+              <input type="range" id="client-slider" min="1" max="10" value="2" class="range-slider">
+            </div>
+
+            <div class="calculator-slider-group">
+              <div class="slider-header">
+                <span class="slider-label">Average Fee per Project</span>
+                <span class="slider-value" id="rate-val">₹5,000</span>
+              </div>
+              <input type="range" id="project-rate-slider" min="2000" max="30000" step="1000" value="5000" class="range-slider">
+            </div>
+          </div>
+          
+          <div class="calculator-results">
+            <div class="result-box">
+              <span class="label-sm text-white-muted">Estimated Monthly Revenue</span>
+              <strong class="result-amount text-accent" id="revenue-amount">₹10,000</strong>
+            </div>
+            
+            <div class="result-details">
+              <div class="result-detail-item">
+                <span class="body-sm text-white-muted">Course Investment</span>
+                <span class="body-sm text-white">₹2,999</span>
+              </div>
+              <div class="result-detail-item">
+                <span class="body-sm text-white-muted">Time to Payback Investment</span>
+                <span class="body-sm text-accent" id="payback-days">9 Days</span>
+              </div>
+              <div class="result-detail-item">
+                <span class="body-sm text-white-muted">Estimated ROI (First Month)</span>
+                <span class="body-sm text-accent" id="roi-percent">333%</span>
+              </div>
+            </div>
+            
+            <a class="btn btn--accent btn--lg btn--full" href="PAYMENT_LINK_HERE" target="_blank" rel="noopener noreferrer">Secure your seat — ₹2,999</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
          11 · PRICING
          ================================================================ -->
     <section class="section section--surface" id="pricing">
@@ -477,18 +547,125 @@
           <h2 class="heading-xl">Frequently Asked Questions</h2>
         </div>
         <div class="accordion">
-          <details class="accordion__item"><summary class="accordion__header">Who is this for? <span class="material-symbols-outlined accordion__chevron">expand_more</span></summary><div class="accordion__body">Complete beginners who want to start earning. If you have never done this before, you are exactly who it is built for. Anyone who wants to add AI to their work is welcome too.</div></details>
-          <details class="accordion__item"><summary class="accordion__header">Do I need any experience? <span class="material-symbols-outlined accordion__chevron">expand_more</span></summary><div class="accordion__body">No. We start from absolute zero.</div></details>
-          <details class="accordion__item"><summary class="accordion__header">Are the tools really free? <span class="material-symbols-outlined accordion__chevron">expand_more</span></summary><div class="accordion__body">Yes. You will not need to buy anything.</div></details>
-          <details class="accordion__item"><summary class="accordion__header">Are the classes live? <span class="material-symbols-outlined accordion__chevron">expand_more</span></summary><div class="accordion__body">Yes, fully live — never pre-recorded.</div></details>
-          <details class="accordion__item"><summary class="accordion__header">Are there recordings? <span class="material-symbols-outlined accordion__chevron">expand_more</span></summary><div class="accordion__body">No. Classes are live only, so every session is worth showing up for and the batch stays focused. If you miss a class, you get short written notes and can ask your questions in the next one.</div></details>
-          <details class="accordion__item"><summary class="accordion__header">When are the classes? <span class="material-symbols-outlined accordion__chevron">expand_more</span></summary><div class="accordion__body">Mon / Wed / Fri, 8:00–9:30 PM, for one month, starting July 6.</div></details>
-          <details class="accordion__item"><summary class="accordion__header">What if I miss a class? <span class="material-symbols-outlined accordion__chevron">expand_more</span></summary><div class="accordion__body">You will get short written notes, and you can ask anything in the next live session.</div></details>
-          <details class="accordion__item"><summary class="accordion__header">Will I get a certificate? <span class="material-symbols-outlined accordion__chevron">expand_more</span></summary><div class="accordion__body">Yes, a completion certificate under the Veloxis Global brand.</div></details>
-          <details class="accordion__item"><summary class="accordion__header">What is the refund policy? <span class="material-symbols-outlined accordion__chevron">expand_more</span></summary><div class="accordion__body">Full refund up to the end of Class 2. After that, no refunds.</div></details>
-          <details class="accordion__item"><summary class="accordion__header">How do I pay? <span class="material-symbols-outlined accordion__chevron">expand_more</span></summary><div class="accordion__body">Through a secure payment link on this page (UPI, cards, net banking).</div></details>
-          <details class="accordion__item"><summary class="accordion__header">Will this guarantee me a job or income? <span class="material-symbols-outlined accordion__chevron">expand_more</span></summary><div class="accordion__body">No, and anyone who promises that is not being honest. This gives you the skills and the path; the results come from the work you put in.</div></details>
-          <details class="accordion__item"><summary class="accordion__header">How do I ask a question before joining? <span class="material-symbols-outlined accordion__chevron">expand_more</span></summary><div class="accordion__body">Message directly on WhatsApp: +91-8887620727.</div></details>
+          <div class="accordion__item">
+            <button class="accordion__header" aria-expanded="false">
+              <span>Who is this for?</span>
+              <span class="material-symbols-outlined accordion__chevron">expand_more</span>
+            </button>
+            <div class="accordion__body-wrapper">
+              <div class="accordion__body">Complete beginners who want to start earning. If you have never done this before, you are exactly who it is built for. Anyone who wants to add AI to their work is welcome too.</div>
+            </div>
+          </div>
+          
+          <div class="accordion__item">
+            <button class="accordion__header" aria-expanded="false">
+              <span>Do I need any experience?</span>
+              <span class="material-symbols-outlined accordion__chevron">expand_more</span>
+            </button>
+            <div class="accordion__body-wrapper">
+              <div class="accordion__body">No. We start from absolute zero.</div>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__header" aria-expanded="false">
+              <span>Are the tools really free?</span>
+              <span class="material-symbols-outlined accordion__chevron">expand_more</span>
+            </button>
+            <div class="accordion__body-wrapper">
+              <div class="accordion__body">Yes. You will not need to buy anything.</div>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__header" aria-expanded="false">
+              <span>Are the classes live?</span>
+              <span class="material-symbols-outlined accordion__chevron">expand_more</span>
+            </button>
+            <div class="accordion__body-wrapper">
+              <div class="accordion__body">Yes, fully live — never pre-recorded.</div>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__header" aria-expanded="false">
+              <span>Are there recordings?</span>
+              <span class="material-symbols-outlined accordion__chevron">expand_more</span>
+            </button>
+            <div class="accordion__body-wrapper">
+              <div class="accordion__body">No. Classes are live only, so every session is worth showing up for and the batch stays focused. If you miss a class, you get short written notes and can ask your questions in the next one.</div>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__header" aria-expanded="false">
+              <span>When are the classes?</span>
+              <span class="material-symbols-outlined accordion__chevron">expand_more</span>
+            </button>
+            <div class="accordion__body-wrapper">
+              <div class="accordion__body">Mon / Wed / Fri, 8:00–9:30 PM, for one month, starting July 6.</div>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__header" aria-expanded="false">
+              <span>What if I miss a class?</span>
+              <span class="material-symbols-outlined accordion__chevron">expand_more</span>
+            </button>
+            <div class="accordion__body-wrapper">
+              <div class="accordion__body">You will get short written notes, and you can ask anything in the next live session.</div>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__header" aria-expanded="false">
+              <span>Will I get a certificate?</span>
+              <span class="material-symbols-outlined accordion__chevron">expand_more</span>
+            </button>
+            <div class="accordion__body-wrapper">
+              <div class="accordion__body">Yes, a completion certificate under the Veloxis Global brand.</div>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__header" aria-expanded="false">
+              <span>What is the refund policy?</span>
+              <span class="material-symbols-outlined accordion__chevron">expand_more</span>
+            </button>
+            <div class="accordion__body-wrapper">
+              <div class="accordion__body">Full refund up to the end of Class 2. After that, no refunds.</div>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__header" aria-expanded="false">
+              <span>How do I pay?</span>
+              <span class="material-symbols-outlined accordion__chevron">expand_more</span>
+            </button>
+            <div class="accordion__body-wrapper">
+              <div class="accordion__body">Through a secure payment link on this page (UPI, cards, net banking).</div>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__header" aria-expanded="false">
+              <span>Will this guarantee me a job or income?</span>
+              <span class="material-symbols-outlined accordion__chevron">expand_more</span>
+            </button>
+            <div class="accordion__body-wrapper">
+              <div class="accordion__body">No, and anyone who promises that is not being honest. This gives you the skills and the path; the results come from the work you put in.</div>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__header" aria-expanded="false">
+              <span>How do I ask a question before joining?</span>
+              <span class="material-symbols-outlined accordion__chevron">expand_more</span>
+            </button>
+            <div class="accordion__body-wrapper">
+              <div class="accordion__body">Message directly on WhatsApp: +91-8887620727.</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -497,14 +674,26 @@
          14 · FINAL CTA
          ================================================================ -->
     <section class="section section--offwhite section--bordered" id="final-cta">
-      <div class="container text-center reveal-group" style="max-width:640px;">
-        <h2 class="heading-xl">The next batch starts July 6.</h2>
-        <p class="body-lg text-muted">
-          There are only 25 seats. If you have been waiting for a sign to finally start — to learn something that is truly yours, that you can use anywhere — this is it. Thirty days from now, you could be looking back at the moment you began.
-        </p>
-        <div class="cta-pair">
-          <a class="btn btn--accent btn--lg" href="PAYMENT_LINK_HERE" target="_blank" rel="noopener noreferrer">Register now — ₹2,999</a>
-          <a class="btn btn--outline btn--lg" href="WHATSAPP_LINK_HERE" target="_blank" rel="noopener noreferrer">Have questions? Message on WhatsApp</a>
+      <div class="container final-cta-grid reveal-group">
+        <div class="final-cta__image">
+          <div class="glass-photo-frame glass-photo-frame--rot">
+            <img src="images/my-pics/Muddassir_Ali.webp" alt="Muddassir Ali teaching" class="final-photo" loading="lazy">
+            <div class="photo-badge">Join Muddassir Live</div>
+          </div>
+        </div>
+        <div class="final-cta__content">
+          <div class="badge badge--amber">
+            <span class="badge__dot"></span>
+            <span>ONLY 25 SEATS AVAILABLE</span>
+          </div>
+          <h2 class="heading-xl">The next batch starts July 6.</h2>
+          <p class="body-lg text-muted">
+            If you have been waiting for a sign to finally start — to learn something that is truly yours, that you can use anywhere — this is it. Thirty days from now, you could be looking back at the moment you began. Let's build your AI digital marketing future together.
+          </p>
+          <div class="cta-pair">
+            <a class="btn btn--accent btn--lg" href="PAYMENT_LINK_HERE" target="_blank" rel="noopener noreferrer">Register now — ₹2,999</a>
+            <a class="btn btn--outline btn--lg" href="WHATSAPP_LINK_HERE" target="_blank" rel="noopener noreferrer">Message on WhatsApp</a>
+          </div>
         </div>
       </div>
     </section>

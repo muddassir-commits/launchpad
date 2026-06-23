@@ -193,4 +193,117 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     });
   }
+
+  /* ─── 12. SMOOTH ANCHOR LINK SCROLLING ──────────────────── */
+  if (lenis) {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', e => {
+        const targetId = anchor.getAttribute('href');
+        if (targetId === '#') return;
+        const target = document.querySelector(targetId);
+        if (target) {
+          e.preventDefault();
+          lenis.scrollTo(target, { offset: -64, duration: 1.2 });
+        }
+      });
+    });
+  }
+
+  /* ─── 13. SMOOTH FAQ ACCORDION (GSAP) ────────────────────── */
+  document.querySelectorAll('.accordion__item').forEach(item => {
+    const header = item.querySelector('.accordion__header');
+    const wrapper = item.querySelector('.accordion__body-wrapper');
+    
+    if (header && wrapper) {
+      header.addEventListener('click', () => {
+        const isActive = item.classList.contains('is-active');
+        
+        // Close other items
+        document.querySelectorAll('.accordion__item').forEach(otherItem => {
+          if (otherItem !== item && otherItem.classList.contains('is-active')) {
+            otherItem.classList.remove('is-active');
+            otherItem.querySelector('.accordion__header').setAttribute('aria-expanded', 'false');
+            gsap.to(otherItem.querySelector('.accordion__body-wrapper'), { height: 0, duration: 0.35, ease: 'power2.out' });
+          }
+        });
+        
+        // Toggle current item
+        if (isActive) {
+          item.classList.remove('is-active');
+          header.setAttribute('aria-expanded', 'false');
+          gsap.to(wrapper, { height: 0, duration: 0.35, ease: 'power2.out' });
+        } else {
+          item.classList.add('is-active');
+          header.setAttribute('aria-expanded', 'true');
+          gsap.to(wrapper, { height: wrapper.scrollHeight, duration: 0.35, ease: 'power2.out' });
+        }
+      });
+    }
+  });
+
+  /* ─── 14. INTERACTIVE ROI CALCULATOR ─────────────────────── */
+  const clientSlider = document.getElementById('client-slider');
+  const rateSlider = document.getElementById('project-rate-slider');
+  
+  const clientValDisplay = document.getElementById('client-val');
+  const rateValDisplay = document.getElementById('rate-val');
+  
+  const revenueDisplay = document.getElementById('revenue-amount');
+  const paybackDisplay = document.getElementById('payback-days');
+  const roiDisplay = document.getElementById('roi-percent');
+  
+  function updateCalculator() {
+    if (!clientSlider || !rateSlider) return;
+    
+    const clients = parseInt(clientSlider.value, 10);
+    const rate = parseInt(rateSlider.value, 10);
+    
+    clientValDisplay.textContent = clients;
+    rateValDisplay.textContent = '₹' + rate.toLocaleString('en-IN');
+    
+    const monthlyRevenue = clients * rate;
+    revenueDisplay.textContent = '₹' + monthlyRevenue.toLocaleString('en-IN');
+    
+    // Payback period
+    const courseFee = 2999;
+    const paybackDays = Math.ceil((courseFee / monthlyRevenue) * 30);
+    paybackDisplay.textContent = paybackDays + (paybackDays === 1 ? ' Day' : ' Days');
+    
+    // ROI Percentage
+    const roi = ((monthlyRevenue - courseFee) / courseFee) * 100;
+    roiDisplay.textContent = Math.round(roi) + '%';
+  }
+  
+  if (clientSlider && rateSlider) {
+    clientSlider.addEventListener('input', updateCalculator);
+    rateSlider.addEventListener('input', updateCalculator);
+    updateCalculator(); // Initialize on load
+  }
+
+  /* ─── 15. MAGNETIC BUTTON EFFECT ────────────────────────── */
+  if (!isMobile && !noMotion) {
+    document.querySelectorAll('.btn--accent, .glass-photo-frame').forEach(el => {
+      el.addEventListener('mousemove', e => {
+        const rect = el.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        
+        gsap.to(el, {
+          x: x * 0.15,
+          y: y * 0.15,
+          duration: 0.3,
+          ease: 'power2.out'
+        });
+      });
+      
+      el.addEventListener('mouseleave', () => {
+        gsap.to(el, {
+          x: 0,
+          y: 0,
+          duration: 0.5,
+          ease: 'elastic.out(1, 0.3)'
+        });
+      });
+    });
+  }
 });
