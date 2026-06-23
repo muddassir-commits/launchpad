@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The AI Marketing Launchpad</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#c8c6c7",
+                        "surface-tint": "#5f5e5f",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f3f3f4",
+                        "tertiary-fixed": "#ffdea8",
+                        "surface-container-high": "#e8e8e8",
+                        "on-primary-container": "#858384",
+                        "surface-variant": "#e2e2e2",
+                        "on-secondary-fixed": "#001f28",
+                        "secondary-fixed": "#b7eaff",
+                        "on-surface-variant": "#46464a",
+                        "inverse-primary": "#c8c6c7",
+                        "outline-variant": "#c7c6ca",
+                        "secondary": "#00677f",
+                        "surface-dim": "#dadada",
+                        "primary": "#000000",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "slate-gray": "#4B5563",
+                        "on-tertiary-fixed": "#271900",
+                        "surface-bright": "#f9f9f9",
+                        "background": "#f9f9f9",
+                        "surface-container-highest": "#e2e2e2",
+                        "outline": "#77777b",
+                        "tertiary-fixed-dim": "#ffba20",
+                        "secondary-container": "#00ccf9",
+                        "on-secondary-fixed-variant": "#004e60",
+                        "primary-fixed": "#e5e2e3",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed-dim": "#4cd6ff",
+                        "surface": "#f9f9f9",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-surface": "#1a1c1c",
+                        "on-secondary-container": "#005266",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "tertiary-container": "#271900",
+                        "primary-container": "#1c1b1c",
+                        "surface-container": "#eeeeee",
+                        "on-tertiary-fixed-variant": "#5e4200",
+                        "tertiary": "#000000",
+                        "on-primary-fixed-variant": "#474647",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#1c1b1c",
+                        "surface-off-white": "#F9FAFB",
+                        "on-tertiary-container": "#ac7b00",
+                        "on-background": "#1a1c1c",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#2f3131",
+                        "accent": "#00D1FF",
+                        "accent-dark": "#00a3cc",
+                        "warning": "#FFB800"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-sm": "12px",
+                        "stack-lg": "48px",
+                        "container-max": "1280px",
+                        "margin-x": "32px",
+                        "section-padding": "96px",
+                        "gutter": "24px",
+                        "stack-md": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "headline-md": ["Montserrat", "sans-serif"],
+                        "label-sm": ["Inter", "sans-serif"],
+                        "label-md": ["Inter", "sans-serif"],
+                        "display-lg-mobile": ["Montserrat", "sans-serif"],
+                        "display-lg": ["Montserrat", "sans-serif"],
+                        "headline-xl": ["Montserrat", "sans-serif"],
+                        "headline-lg": ["Montserrat", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}]
+                    },
+                    boxShadow: {
+                        'ambient': '0 20px 40px rgba(10, 10, 11, 0.05)',
+                        'ambient-hover': '0 30px 60px rgba(10, 10, 11, 0.08)',
+                        'btn-lift': '0 8px 16px rgba(0, 209, 255, 0.25)',
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #f9f9f9;
+            color: #1a1c1c;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            left: 24px;
+            top: 48px;
+            bottom: -24px;
+            width: 2px;
+            background-color: #e2e2e2;
+        }
+        .timeline-item:last-child .timeline-line::before {
+            display: none;
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+<!-- Navigation (TopNavBar) -->
+<nav class="sticky top-0 w-full z-50 bg-surface shadow-sm h-16 flex justify-between items-center max-w-container-max mx-auto px-margin-x">
+<a class="text-headline-md font-headline-md font-bold text-primary flex items-center gap-2" href="#">
+            The AI Marketing Launchpad
+        </a>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200" href="#curriculum">Curriculum</a>
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200" href="#instructor">Instructors</a>
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200" href="#pricing">Pricing</a>
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200" href="#faq">FAQ</a>
+</div>
+<div class="hidden md:flex">
+<a class="h-10 px-6 bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center rounded hover:bg-opacity-90 transition-all" href="#pricing">
+                Register Now
+            </a>
+</div>
+<!-- Mobile Menu Button -->
+<button class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+<!-- Hero Section -->
+<section class="relative pt-32 pb-section-padding px-margin-x max-w-container-max mx-auto overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+<div class="lg:col-span-8 lg:col-start-3 text-center flex flex-col items-center">
+<div class="inline-flex items-center gap-2 px-4 py-2 bg-warning rounded-full mb-8">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">LIVE • STARTS JULY 6 • 25 SEATS</span>
+</div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6 max-w-4xl mx-auto leading-tight">
+                    Start earning online from zero — <span class="text-accent">in 30 days.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl mx-auto">
+                    A live, 30-day course for complete beginners. Learn AI and digital marketing using only free tools, build something real in every class, and walk away with a skill you can use in any field.
+                </p>
+<div class="flex flex-col items-center gap-4 w-full sm:w-auto">
+<a class="w-full sm:w-auto h-14 px-8 bg-accent text-white font-label-md text-label-md flex items-center justify-center rounded-lg hover:bg-accent-dark transition-all shadow-btn-lift hover:shadow-lg transform hover:-translate-y-0.5" href="#pricing">
+                        Register now — ₹2,999
+                    </a>
+<p class="font-label-sm text-label-sm text-slate-gray flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">calendar_month</span> Mon / Wed / Fri
+                        <span class="opacity-50">·</span>
+<span class="material-symbols-outlined text-sm">schedule</span> 8:00–9:30 PM
+                        <span class="opacity-50">·</span>
+<span class="material-symbols-outlined text-sm">videocam</span> Live only
+                    </p>
+</div>
+</div>
+</div>
+<!-- Trust Strip -->
+<div class="mt-24 pt-8 border-t border-surface-variant">
+<div class="flex flex-wrap justify-center gap-x-12 gap-y-6">
+<div class="flex items-center gap-2 text-slate-gray">
+<span class="material-symbols-outlined icon-fill text-accent">verified</span>
+<span class="font-label-md text-label-md">6+ years experience</span>
+</div>
+<div class="flex items-center gap-2 text-slate-gray">
+<span class="material-symbols-outlined icon-fill text-accent">group</span>
+<span class="font-label-md text-label-md">200+ marketers trained</span>
+</div>
+<div class="flex items-center gap-2 text-slate-gray">
+<span class="material-symbols-outlined icon-fill text-accent">construction</span>
+<span class="font-label-md text-label-md">Only free tools</span>
+</div>
+<div class="flex items-center gap-2 text-slate-gray">
+<span class="material-symbols-outlined icon-fill text-accent">handshake</span>
+<span class="font-label-md text-label-md">Honest, no fake promises</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Problem Section -->
+<section class="py-section-padding bg-surface-off-white px-margin-x">
+<div class="max-w-container-max mx-auto bento-grid">
+<div class="col-span-12 lg:col-span-5 flex flex-col justify-center pr-0 lg:pr-12">
+<span class="font-label-sm text-label-sm text-accent uppercase tracking-widest mb-4 block">If this sounds like you</span>
+<h2 class="font-headline-xl text-headline-xl text-primary mb-6">You have the will. You were never shown the way.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                    You see people earning online and know it's possible. You see AI changing everything. But the sheer amount of information is overwhelming, and most advice is trying to sell you expensive tools.
+                </p>
+</div>
+<div class="col-span-12 lg:col-span-7 grid gap-6">
+<div class="bg-surface p-8 rounded-xl shadow-ambient hover:shadow-ambient-hover transition-shadow flex gap-6 items-start">
+<div class="w-12 h-12 rounded-lg bg-surface-off-white flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-accent icon-fill text-2xl">explore</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">"I do not know where to start."</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">There's too much noise. You need a structured, step-by-step path.</p>
+</div>
+</div>
+<div class="bg-surface p-8 rounded-xl shadow-ambient hover:shadow-ambient-hover transition-shadow flex gap-6 items-start">
+<div class="w-12 h-12 rounded-lg bg-surface-off-white flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-accent icon-fill text-2xl">payments</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">"Courses are too expensive..."</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">...and they require you to buy paid tools immediately. We only use free tools.</p>
+</div>
+</div>
+<div class="bg-surface p-8 rounded-xl shadow-ambient hover:shadow-ambient-hover transition-shadow flex gap-6 items-start">
+<div class="w-12 h-12 rounded-lg bg-surface-off-white flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-accent icon-fill text-2xl">smart_toy</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">"I am scared AI will make my skills useless."</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">AI is a tool. We teach you how to direct it so you remain the valuable asset.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About the Course -->
+<section class="py-section-padding bg-surface px-margin-x">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-xl text-headline-xl text-primary mb-6">The AI Marketing Launchpad</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">This isn't just theory. This is about building a foundation that actually works in the real world.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="bg-surface-off-white p-8 rounded-xl">
+<span class="material-symbols-outlined text-accent icon-fill text-3xl mb-4 block">live_tv</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">100% Live</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">No pre-recorded fluff. Ask questions, get unstuck instantly, and learn together.</p>
+</div>
+<div class="bg-surface-off-white p-8 rounded-xl">
+<span class="material-symbols-outlined text-accent icon-fill text-3xl mb-4 block">money_off</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Only Free Tools</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">We use Canva, ChatGPT Free, and Claude Free. No hidden costs or required subscriptions.</p>
+</div>
+<div class="bg-surface-off-white p-8 rounded-xl">
+<span class="material-symbols-outlined text-accent icon-fill text-3xl mb-4 block">build</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Build Every Class</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">You won't just watch. You will create graphics, write copy, and build strategies during the session.</p>
+</div>
+<div class="bg-surface-off-white p-8 rounded-xl">
+<span class="material-symbols-outlined text-accent icon-fill text-3xl mb-4 block">verified_user</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Honest</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">No "get rich quick" promises. Just solid skills, hard work, and a realistic path forward.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Versatility Section -->
+<section class="py-section-padding bg-surface-off-white px-margin-x border-y border-surface-variant">
+<div class="max-w-container-max mx-auto text-center">
+<h2 class="font-headline-xl text-headline-xl text-primary mb-12">These skills don't stay in one box.</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="p-6">
+<span class="material-symbols-outlined text-accent icon-fill text-4xl mb-4 block">work</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Job</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Land entry-level marketing roles with a portfolio that proves you can do the work.</p>
+</div>
+<div class="p-6">
+<span class="material-symbols-outlined text-accent icon-fill text-4xl mb-4 block">freelance</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Freelancing</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Offer services like social media management, content creation, or basic SEO to small businesses.</p>
+</div>
+<div class="p-6">
+<span class="material-symbols-outlined text-accent icon-fill text-4xl mb-4 block">storefront</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Your Own Business</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Apply these strategies to grow your own project, store, or personal brand.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Empowerment Section -->
+<section class="py-section-padding bg-primary px-margin-x text-center">
+<div class="max-w-3xl mx-auto">
+<h2 class="font-headline-xl text-headline-xl text-on-primary mb-6">The kind of skill no one can take from you.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Once you know how to capture attention and communicate value online, you have a foundation you can rely on forever.</p>
+</div>
+</section>
+<!-- Full Curriculum -->
+<section class="py-section-padding bg-surface px-margin-x" id="curriculum">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<span class="font-label-sm text-label-sm text-accent uppercase tracking-widest mb-4 block">Curriculum</span>
+<h2 class="font-headline-xl text-headline-xl text-primary mb-6">What You Will Learn</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">A structured, step-by-step path designed for complete beginners.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<!-- Week 1 -->
+<div class="relative timeline-item pl-12">
+<div class="timeline-line"></div>
+<div class="absolute left-0 top-0 w-12 h-12 rounded-full bg-surface-off-white border-2 border-surface-variant flex items-center justify-center text-primary font-bold">1</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Week 1: The Foundation</h3>
+<ul class="space-y-4">
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-accent mt-1">check_circle</span>
+<div>
+<strong class="text-primary font-medium block">Digital Marketing Basics</strong>
+<span class="text-on-surface-variant text-sm">Understanding the ecosystem without the jargon.</span>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-accent mt-1">check_circle</span>
+<div>
+<strong class="text-primary font-medium block">AI for Marketers</strong>
+<span class="text-on-surface-variant text-sm">How to use ChatGPT and Claude effectively.</span>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-accent mt-1">check_circle</span>
+<div>
+<strong class="text-primary font-medium block">Audience Research</strong>
+<span class="text-on-surface-variant text-sm">Finding out who you are talking to and what they want.</span>
+</div>
+</li>
+</ul>
+</div>
+<!-- Week 2 -->
+<div class="relative timeline-item pl-12">
+<div class="timeline-line"></div>
+<div class="absolute left-0 top-0 w-12 h-12 rounded-full bg-surface-off-white border-2 border-surface-variant flex items-center justify-center text-primary font-bold">2</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Week 2: Content Creation</h3>
+<ul class="space-y-4">
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-accent mt-1">check_circle</span>
+<div>
+<strong class="text-primary font-medium block">Copywriting Basics</strong>
+<span class="text-on-surface-variant text-sm">Writing words that actually sell.</span>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-accent mt-1">check_circle</span>
+<div>
+<strong class="text-primary font-medium block">Visual Design with Canva</strong>
+<span class="text-on-surface-variant text-sm">Creating professional graphics for free.</span>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-accent mt-1">check_circle</span>
+<div>
+<strong class="text-primary font-medium block">Social Media Strategy</strong>
+<span class="text-on-surface-variant text-sm">Planning and organizing your content calendar.</span>
+</div>
+</li>
+</ul>
+</div>
+<!-- Week 3 -->
+<div class="relative timeline-item pl-12">
+<div class="timeline-line"></div>
+<div class="absolute left-0 top-0 w-12 h-12 rounded-full bg-surface-off-white border-2 border-surface-variant flex items-center justify-center text-primary font-bold">3</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Week 3: Distribution &amp; Growth</h3>
+<ul class="space-y-4">
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-accent mt-1">check_circle</span>
+<div>
+<strong class="text-primary font-medium block">SEO Fundamentals</strong>
+<span class="text-on-surface-variant text-sm">Getting found on Google organically.</span>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-accent mt-1">check_circle</span>
+<div>
+<strong class="text-primary font-medium block">Email Marketing Intro</strong>
+<span class="text-on-surface-variant text-sm">Building and engaging a list.</span>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-accent mt-1">check_circle</span>
+<div>
+<strong class="text-primary font-medium block">Analytics Basics</strong>
+<span class="text-on-surface-variant text-sm">Understanding what is working and what isn't.</span>
+</div>
+</li>
+</ul>
+</div>
+<!-- Week 4 -->
+<div class="relative timeline-item pl-12">
+<div class="timeline-line"></div>
+<div class="absolute left-0 top-0 w-12 h-12 rounded-full bg-surface-off-white border-2 border-surface-variant flex items-center justify-center text-primary font-bold">4</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Week 4: Monetization &amp; Portfolio</h3>
+<ul class="space-y-4">
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-accent mt-1">check_circle</span>
+<div>
+<strong class="text-primary font-medium block">Building Your Portfolio</strong>
+<span class="text-on-surface-variant text-sm">Showcasing the work you've done in class.</span>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-accent mt-1">check_circle</span>
+<div>
+<strong class="text-primary font-medium block">Freelancing 101</strong>
+<span class="text-on-surface-variant text-sm">How to find clients and price your services.</span>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-accent mt-1">check_circle</span>
+<div>
+<strong class="text-primary font-medium block">Next Steps</strong>
+<span class="text-on-surface-variant text-sm">Your personalized roadmap for after the course.</span>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="mt-12 bg-warning bg-opacity-20 p-8 rounded-xl text-center border border-warning border-opacity-30">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Bonus Support</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Includes dedicated Q&amp;A sessions and portfolio reviews.</p>
+</div>
+</div>
+</section>
+<!-- Instructor -->
+<section class="py-section-padding bg-surface-off-white px-margin-x border-y border-surface-variant" id="instructor">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-5 flex justify-center">
+<div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden bg-surface-variant border-4 border-surface shadow-ambient">
+<!-- Placeholder for Instructor Image -->
+<div class="w-full h-full bg-slate-200 flex items-center justify-center text-slate-400">
+<span class="material-symbols-outlined text-6xl">person</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7">
+<span class="font-label-sm text-label-sm text-accent uppercase tracking-widest mb-4 block">Your Instructor</span>
+<h2 class="font-headline-xl text-headline-xl text-primary mb-6">Muddassir Ali</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
+                        I've spent over 6 years in the trenches of digital marketing. I didn't start with a massive budget or fancy tools. I started from zero, just like you. I've trained over 200 marketers, not by selling them complex theories, but by showing them practical, actionable steps using accessible tools.
+                    </p>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                        My goal isn't to make you a passive learner. It's to make you a practitioner. We will build, we will experiment, and we will get results—together.
+                    </p>
+<div class="flex gap-4">
+<div class="px-4 py-2 bg-surface rounded-lg border border-surface-variant flex flex-col items-center">
+<span class="font-headline-md text-primary font-bold">6+</span>
+<span class="text-xs text-on-surface-variant uppercase tracking-wider">Years Exp</span>
+</div>
+<div class="px-4 py-2 bg-surface rounded-lg border border-surface-variant flex flex-col items-center">
+<span class="font-headline-md text-primary font-bold">200+</span>
+<span class="text-xs text-on-surface-variant uppercase tracking-wider">Trained</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio/Gallery Placeholder -->
+<section class="py-section-padding bg-surface px-margin-x">
+<div class="max-w-container-max mx-auto text-center">
+<h2 class="font-headline-xl text-headline-xl text-primary mb-12">Years of doing the work.</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<!-- Gallery Placeholders -->
+<div class="aspect-square bg-surface-variant rounded-xl flex items-center justify-center text-on-surface-variant">Gallery Image</div>
+<div class="aspect-square bg-surface-variant rounded-xl flex items-center justify-center text-on-surface-variant">Gallery Image</div>
+<div class="aspect-square bg-surface-variant rounded-xl flex items-center justify-center text-on-surface-variant">Gallery Image</div>
+<div class="aspect-square bg-surface-variant rounded-xl flex items-center justify-center text-on-surface-variant">Gallery Image</div>
+</div>
+</div>
+</section>
+<!-- Outcomes -->
+<section class="py-section-padding bg-primary px-margin-x">
+<div class="max-w-container-max mx-auto">
+<h2 class="font-headline-xl text-headline-xl text-on-primary mb-12 text-center">By the end, you will have:</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-accent text-3xl">check_circle</span>
+<p class="font-body-lg text-on-primary">A tangible portfolio of work (graphics, copy, strategy).</p>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-accent text-3xl">check_circle</span>
+<p class="font-body-lg text-on-primary">The confidence to use AI tools for real-world tasks.</p>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-accent text-3xl">check_circle</span>
+<p class="font-body-lg text-on-primary">A solid understanding of core digital marketing channels.</p>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-accent text-3xl">check_circle</span>
+<p class="font-body-lg text-on-primary">A clear action plan for your next steps (job hunting, freelancing, or personal projects).</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonial Placeholder -->
+<section class="py-section-padding bg-surface-off-white px-margin-x">
+<div class="max-w-container-max mx-auto text-center">
+<h2 class="font-headline-xl text-headline-xl text-primary mb-12">From people who started here.</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Testimonial Cards -->
+<div class="bg-surface p-8 rounded-xl shadow-sm border border-surface-variant text-left">
+<div class="flex text-warning mb-4">
+<span class="material-symbols-outlined icon-fill text-sm">star</span>
+<span class="material-symbols-outlined icon-fill text-sm">star</span>
+<span class="material-symbols-outlined icon-fill text-sm">star</span>
+<span class="material-symbols-outlined icon-fill text-sm">star</span>
+<span class="material-symbols-outlined icon-fill text-sm">star</span>
+</div>
+<p class="font-body-md text-on-surface-variant italic mb-6">"Testimonial quote goes here. It was a great experience."</p>
+<div class="font-label-md text-primary">Student Name</div>
+</div>
+<div class="bg-surface p-8 rounded-xl shadow-sm border border-surface-variant text-left">
+<div class="flex text-warning mb-4">
+<span class="material-symbols-outlined icon-fill text-sm">star</span>
+<span class="material-symbols-outlined icon-fill text-sm">star</span>
+<span class="material-symbols-outlined icon-fill text-sm">star</span>
+<span class="material-symbols-outlined icon-fill text-sm">star</span>
+<span class="material-symbols-outlined icon-fill text-sm">star</span>
+</div>
+<p class="font-body-md text-on-surface-variant italic mb-6">"Testimonial quote goes here. Highly recommended."</p>
+<div class="font-label-md text-primary">Student Name</div>
+</div>
+<div class="bg-surface p-8 rounded-xl shadow-sm border border-surface-variant text-left">
+<div class="flex text-warning mb-4">
+<span class="material-symbols-outlined icon-fill text-sm">star</span>
+<span class="material-symbols-outlined icon-fill text-sm">star</span>
+<span class="material-symbols-outlined icon-fill text-sm">star</span>
+<span class="material-symbols-outlined icon-fill text-sm">star</span>
+<span class="material-symbols-outlined icon-fill text-sm">star</span>
+</div>
+<p class="font-body-md text-on-surface-variant italic mb-6">"Testimonial quote goes here. Practical and straightforward."</p>
+<div class="font-label-md text-primary">Student Name</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing -->
+<section class="py-section-padding bg-surface px-margin-x" id="pricing">
+<div class="max-w-container-max mx-auto flex flex-col items-center">
+<div class="text-center mb-12">
+<span class="font-label-sm text-label-sm text-accent uppercase tracking-widest mb-4 block">Investment</span>
+<h2 class="font-headline-xl text-headline-xl text-primary mb-6">One price. Everything included.</h2>
+</div>
+<div class="w-full max-w-md bg-surface-container-lowest rounded-2xl shadow-ambient-hover border border-surface-variant p-8 md:p-12 relative overflow-hidden">
+<div class="absolute top-0 right-0 bg-warning text-primary font-bold text-xs py-1 px-4 rounded-bl-lg">ONLY 25 SEATS</div>
+<div class="text-center border-b border-surface-variant pb-8 mb-8">
+<div class="text-display-lg font-display-lg text-primary mb-2">₹2,999</div>
+<p class="text-on-surface-variant">Full 30-day live program</p>
+</div>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent text-xl">check</span>
+<span class="text-on-surface">12 Live Interactive Sessions</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent text-xl">check</span>
+<span class="text-on-surface">Hands-on projects every class</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent text-xl">check</span>
+<span class="text-on-surface">Dedicated Q&amp;A support</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent text-xl">check</span>
+<span class="text-on-surface">Portfolio review</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent text-xl">check</span>
+<span class="text-on-surface">Post-course roadmap</span>
+</li>
+</ul>
+<a class="w-full h-14 bg-accent text-white font-label-md text-label-md flex items-center justify-center rounded-lg hover:bg-accent-dark transition-all shadow-btn-lift hover:shadow-lg transform hover:-translate-y-0.5 mb-4" href="#">
+                    Register Now
+                </a>
+<p class="text-center text-xs text-slate-gray">
+                    7-day money-back guarantee. If you attend the first week and don't feel it's right for you, get a full refund.
+                </p>
+</div>
+</div>
+</section>
+<!-- How it Works -->
+<section class="py-section-padding bg-surface-off-white px-margin-x border-y border-surface-variant">
+<div class="max-w-container-max mx-auto text-center">
+<h2 class="font-headline-xl text-headline-xl text-primary mb-12">Joining is simple.</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-surface border-2 border-surface-variant flex items-center justify-center text-primary font-bold text-xl mb-4">1</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Register</h3>
+<p class="text-on-surface-variant text-sm">Secure your spot for the July 6th cohort.</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-surface border-2 border-surface-variant flex items-center justify-center text-primary font-bold text-xl mb-4">2</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Get Access</h3>
+<p class="text-on-surface-variant text-sm">Receive all links and community access.</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-surface border-2 border-surface-variant flex items-center justify-center text-primary font-bold text-xl mb-4">3</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Attend Live</h3>
+<p class="text-on-surface-variant text-sm">Join the sessions Mon/Wed/Fri at 8 PM.</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-surface border-2 border-surface-variant flex items-center justify-center text-primary font-bold text-xl mb-4">4</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Build</h3>
+<p class="text-on-surface-variant text-sm">Apply what you learn immediately.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ -->
+<section class="py-section-padding bg-surface px-margin-x" id="faq">
+<div class="max-w-3xl mx-auto">
+<div class="text-center mb-12">
+<h2 class="font-headline-xl text-headline-xl text-primary mb-6">Frequently Asked Questions</h2>
+</div>
+<div class="space-y-4">
+<!-- FAQ Item 1 -->
+<details class="bg-surface-off-white rounded-lg border border-surface-variant group">
+<summary class="font-headline-md text-headline-md text-primary p-6 cursor-pointer list-none flex justify-between items-center">
+                        Do I need any prior experience?
+                        <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant">
+                        None at all. This course is designed specifically for complete beginners. We start from absolute scratch.
+                    </div>
+</details>
+<!-- FAQ Item 2 -->
+<details class="bg-surface-off-white rounded-lg border border-surface-variant group">
+<summary class="font-headline-md text-headline-md text-primary p-6 cursor-pointer list-none flex justify-between items-center">
+                        Will I need to buy expensive software later?
+                        <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant">
+                        No. The entire curriculum is built around free tools like Canva, standard ChatGPT, and basic analytics. You won't need to spend another rupee to execute what you learn.
+                    </div>
+</details>
+<!-- FAQ Item 3 -->
+<details class="bg-surface-off-white rounded-lg border border-surface-variant group">
+<summary class="font-headline-md text-headline-md text-primary p-6 cursor-pointer list-none flex justify-between items-center">
+                        What if I miss a live session?
+                        <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant">
+                        Recordings will be provided, but attending live is highly recommended to participate in the hands-on building exercises and get immediate feedback.
+                    </div>
+</details>
+<!-- FAQ Item 4 -->
+<details class="bg-surface-off-white rounded-lg border border-surface-variant group">
+<summary class="font-headline-md text-headline-md text-primary p-6 cursor-pointer list-none flex justify-between items-center">
+                        Is this a recorded course?
+                        <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant">
+                        No. Every single session is 100% live.
+                    </div>
+</details>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-section-padding bg-surface-off-white px-margin-x text-center border-t border-surface-variant">
+<div class="max-w-2xl mx-auto">
+<h2 class="font-headline-xl text-headline-xl text-primary mb-6">The next batch starts July 6.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">Don't overthink it. Commit to 30 days of learning, building, and showing up. Secure your spot before the 25 seats are gone.</p>
+<div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+<a class="w-full sm:w-auto h-14 px-8 bg-accent text-white font-label-md text-label-md flex items-center justify-center rounded-lg hover:bg-accent-dark transition-all shadow-btn-lift hover:shadow-lg transform hover:-translate-y-0.5" href="#pricing">
+                    Register now — ₹2,999
+                </a>
+<a class="w-full sm:w-auto h-14 px-8 bg-surface-container-lowest text-primary border border-surface-variant font-label-md text-label-md flex items-center justify-center rounded-lg hover:bg-surface-variant transition-all" href="#curriculum">
+                    Review Curriculum
+                </a>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full pt-section-padding pb-stack-lg bg-surface-container-lowest max-w-container-max mx-auto px-margin-x grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="col-span-1 md:col-span-3 mb-8 border-b border-surface-variant pb-8">
+<h3 class="text-headline-sm font-headline-sm font-black text-primary mb-2">The AI Marketing Launchpad</h3>
+<p class="font-body-md text-body-md text-slate-gray">Start earning online from zero — in 30 days.</p>
+</div>
+<div class="col-span-1 md:col-span-2 text-slate-gray font-label-sm text-label-sm">
+            © 2024 The AI Marketing Launchpad. All rights reserved. Only 25 seats available per cohort.
+        </div>
+<div class="col-span-1 flex gap-6 md:justify-end">
+<a class="font-label-sm text-label-sm text-slate-gray hover:text-secondary transition-colors duration-200" href="#">Contact Us</a>
+<a class="font-label-sm text-label-sm text-slate-gray hover:text-secondary transition-colors duration-200" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-slate-gray hover:text-secondary transition-colors duration-200" href="#">Terms of Service</a>
+</div>
+</footer>
+</body></html>
