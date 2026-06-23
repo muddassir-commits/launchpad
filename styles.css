@@ -1768,7 +1768,7 @@ ul,ol{list-style:none}
 }
 
 /* ---- 3D Perspective & Sheen ---- */
-.pain-card, .pillar-card, .pricing-card, .testimonial-card {
+.pain-card, .pillar-card, .pricing-card, .testimonial-card, .timeline-card {
   position: relative;
   overflow: hidden;
   transform-style: preserve-3d;
@@ -1807,5 +1807,105 @@ ul,ol{list-style:none}
   .testimonial-slides {
     height: 340px;
   }
+  .timeline-card {
+    padding: 24px;
+    gap: 16px;
+  }
+  .timeline-card__bg-num {
+    font-size: 80px;
+    top: 5px;
+    right: 10px;
+  }
+}
+
+/* ---- Curriculum Bento Cards ---- */
+.timeline-card {
+  position: relative;
+  background: var(--surface-card);
+  border: 1px solid var(--surface-variant);
+  border-radius: var(--r-xl);
+  padding: 40px;
+  box-shadow: var(--shadow);
+  transition: all 0.4s var(--ease);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.timeline-card__bg-num {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 110px;
+  line-height: 1;
+  color: var(--primary);
+  opacity: 0.04;
+  pointer-events: none;
+  user-select: none;
+  transition: all 0.4s var(--ease);
+}
+
+.timeline-card:hover .timeline-card__bg-num {
+  opacity: 0.08;
+  transform: scale(1.05) translateY(-5px);
+}
+
+.timeline-card__header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-card__badge {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  background: rgba(0, 180, 216, 0.08);
+  padding: 6px 12px;
+  border-radius: 50px;
+  text-transform: uppercase;
+}
+
+.timeline-card .heading-md {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.3;
+}
+
+.timeline-card .check-list {
+  margin-top: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-card .check-list li {
+  font-size: 15px;
+  line-height: 1.5;
+  transition: transform 0.3s var(--ease);
+}
+
+.timeline-card .check-list li:hover {
+  transform: translateX(4px);
+}
+
+.timeline-card .check-list li strong {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 2px;
+}
+
+.timeline-card .check-list li .text-muted {
+  font-size: 13px;
+  display: block;
 }
 

@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ─── 9. PREMIUM 3D CARD TILT & SHEEN (desktop) ─────────── */
   if (!isMobile && !noMotion) {
-    document.querySelectorAll('.pain-card, .pillar-card, .pricing-card').forEach(card => {
+    document.querySelectorAll('.pain-card, .pillar-card, .pricing-card, .timeline-card').forEach(card => {
       // Create/ensure sheen element exists
       let sheen = card.querySelector('.card-sheen');
       if (!sheen) {
@@ -217,6 +217,20 @@ document.addEventListener('DOMContentLoaded', () => {
           y: 0,
           transformPerspective: 1000,
           duration: 0.6,
+          ease: 'power2.out',
+          overwrite: 'auto'
+        });
+      });
+
+      // Reset card tilt on click/tap to avoid getting stuck
+      card.addEventListener('click', () => {
+        gsap.to(sheen, { opacity: 0, duration: 0.3 });
+        gsap.to(card, {
+          rotateX: 0,
+          rotateY: 0,
+          y: 0,
+          transformPerspective: 1000,
+          duration: 0.4,
           ease: 'power2.out',
           overwrite: 'auto'
         });
@@ -515,7 +529,7 @@ document.addEventListener('DOMContentLoaded', () => {
       gsap.fromTo(scarcityFill, 
         { width: '0%' },
         {
-          width: '84%',
+          width: '28%',
           duration: 1.5,
           ease: 'power2.out',
           scrollTrigger: {

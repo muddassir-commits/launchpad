@@ -124,10 +124,10 @@
         <div class="container scarcity-banner__inner">
           <div class="scarcity-banner__text">
             <span class="material-symbols-outlined text-warning animate-pulse">local_fire_department</span>
-            <span>Only <strong>4 seats remaining</strong> for the July 6 cohort batch! Seats are strictly limited to 25.</span>
+            <span>Only <strong>18 seats remaining</strong> for the July 6 cohort batch! Seats are strictly limited to 25.</span>
           </div>
           <div class="scarcity-progress-bar">
-            <div class="scarcity-progress-bar__fill" style="width: 84%;"></div>
+            <div class="scarcity-progress-bar__fill" style="width: 28%;"></div>
           </div>
         </div>
       </div>
@@ -248,7 +248,7 @@
             </div>
             
             <div class="checklist-item">
-              <input type="checkbox" id="skill-freelance" class="skill-checkbox">
+              <input type="checkbox" id="skill-freelance" class="skill-checkbox" checked>
               <label for="skill-freelance" class="checklist-label">
                 <strong>Start Freelancing</strong>
                 <span class="text-muted">Offer services like meta ads management, social media styling, and content calendar setup to local business clients.</span>
@@ -256,7 +256,7 @@
             </div>
 
             <div class="checklist-item">
-              <input type="checkbox" id="skill-business" class="skill-checkbox">
+              <input type="checkbox" id="skill-business" class="skill-checkbox" checked>
               <label for="skill-business" class="checklist-label">
                 <strong>Grow Your Own Business</strong>
                 <span class="text-muted">Deploy Meta Ads and SEO optimization to capture direct traffic and scale your sales without agency costs.</span>
@@ -276,9 +276,9 @@
             <div class="circle-progress-container">
               <svg class="circle-progress" viewBox="0 0 120 120">
                 <circle class="circle-progress__bg" cx="60" cy="60" r="50" />
-                <circle class="circle-progress__fill" cx="60" cy="60" r="50" />
+                <circle class="circle-progress__fill" cx="60" cy="60" r="50" style="stroke-dashoffset: 0;" />
               </svg>
-              <div class="circle-progress__value" id="readiness-score">50%</div>
+              <div class="circle-progress__value" id="readiness-score">100%</div>
             </div>
             <h3 class="heading-md text-center">Career Readiness</h3>
             <p class="body-sm text-muted text-center" style="max-width: 240px; margin: 8px auto 0;">
@@ -322,53 +322,57 @@
       </div>
       <div class="container curriculum-grid reveal-group">
         <!-- Week 1 -->
-        <div class="timeline-item">
-          <div class="timeline-item__marker">1</div>
-          <div class="timeline-item__body">
-            <h3 class="heading-md">Week 1 — Foundations + your AI superpower</h3>
-            <ul class="check-list">
-              <li><span class="material-symbols-outlined text-accent">check_circle</span><div><strong>Digital Marketing Basics</strong><br><span class="text-muted">How this whole field works and how money is actually made.</span></div></li>
-              <li><span class="material-symbols-outlined text-accent">check_circle</span><div><strong>Free Toolkit Setup</strong><br><span class="text-muted">Set up your free toolkit.</span></div></li>
-              <li><span class="material-symbols-outlined text-accent">check_circle</span><div><strong>AI Prompting</strong><br><span class="text-muted">Talk to AI so it gives you gold, not garbage.</span></div></li>
-              <li><span class="material-symbols-outlined text-accent">check_circle</span><div><strong>Niche & Offer</strong><br><span class="text-muted">Find your niche and your offer.</span></div></li>
-            </ul>
+        <div class="timeline-card">
+          <div class="timeline-card__bg-num">01</div>
+          <div class="timeline-card__header">
+            <span class="timeline-card__badge">WEEK 1</span>
+            <h3 class="heading-md">Foundations + your AI superpower</h3>
           </div>
+          <ul class="check-list">
+            <li><span class="material-symbols-outlined text-accent">check_circle</span><div><strong>Digital Marketing Basics</strong><span class="text-muted">How this whole field works and how money is actually made.</span></div></li>
+            <li><span class="material-symbols-outlined text-accent">check_circle</span><div><strong>Free Toolkit Setup</strong><span class="text-muted">Set up your free toolkit.</span></div></li>
+            <li><span class="material-symbols-outlined text-accent">check_circle</span><div><strong>AI Prompting</strong><span class="text-muted">Talk to AI so it gives you gold, not garbage.</span></div></li>
+            <li><span class="material-symbols-outlined text-accent">check_circle</span><div><strong>Niche & Offer</strong><span class="text-muted">Find your niche and your offer.</span></div></li>
+          </ul>
         </div>
         <!-- Week 2 -->
-        <div class="timeline-item">
-          <div class="timeline-item__marker">2</div>
-          <div class="timeline-item__body">
-            <h3 class="heading-md">Week 2 — Content that gets attention</h3>
-            <ul class="check-list">
-              <li><span class="material-symbols-outlined text-accent">check_circle</span><div><strong>Copywriting with AI</strong><br><span class="text-muted">Hooks, headlines, persuasion.</span></div></li>
-              <li><span class="material-symbols-outlined text-accent">check_circle</span><div><strong>Content Strategy</strong><br><span class="text-muted">A simple content strategy and calendar.</span></div></li>
-              <li><span class="material-symbols-outlined text-accent">check_circle</span><div><strong>Reels & Design</strong><br><span class="text-muted">Make reels and designs with free tools.</span></div></li>
-            </ul>
+        <div class="timeline-card">
+          <div class="timeline-card__bg-num">02</div>
+          <div class="timeline-card__header">
+            <span class="timeline-card__badge">WEEK 2</span>
+            <h3 class="heading-md">Content that gets attention</h3>
           </div>
+          <ul class="check-list">
+            <li><span class="material-symbols-outlined text-accent">check_circle</span><div><strong>Copywriting with AI</strong><span class="text-muted">Hooks, headlines, persuasion.</span></div></li>
+            <li><span class="material-symbols-outlined text-accent">check_circle</span><div><strong>Content Strategy</strong><span class="text-muted">A simple content strategy and calendar.</span></div></li>
+            <li><span class="material-symbols-outlined text-accent">check_circle</span><div><strong>Reels & Design</strong><span class="text-muted">Make reels and designs with free tools.</span></div></li>
+          </ul>
         </div>
         <!-- Week 3 -->
-        <div class="timeline-item">
-          <div class="timeline-item__marker">3</div>
-          <div class="timeline-item__body">
-            <h3 class="heading-md">Week 3 — Get found + the money skill</h3>
-            <ul class="check-list">
-              <li><span class="material-symbols-outlined text-accent">check_circle</span><div><strong>SEO Fundamentals</strong><br><span class="text-muted">SEO basics and the new AI search.</span></div></li>
-              <li><span class="material-symbols-outlined text-accent">check_circle</span><div><strong>Google Business</strong><br><span class="text-muted">Get a business found on Google.</span></div></li>
-              <li><span class="material-symbols-outlined text-accent">check_circle</span><div><strong>Meta Ads</strong><br><span class="text-muted">Meta Ads, step by step — the skill that gets beginners paid fastest.</span></div></li>
-            </ul>
+        <div class="timeline-card">
+          <div class="timeline-card__bg-num">03</div>
+          <div class="timeline-card__header">
+            <span class="timeline-card__badge">WEEK 3</span>
+            <h3 class="heading-md">Get found + the money skill</h3>
           </div>
+          <ul class="check-list">
+            <li><span class="material-symbols-outlined text-accent">check_circle</span><div><strong>SEO Fundamentals</strong><span class="text-muted">SEO basics and the new AI search.</span></div></li>
+            <li><span class="material-symbols-outlined text-accent">check_circle</span><div><strong>Google Business</strong><span class="text-muted">Get a business found on Google.</span></div></li>
+            <li><span class="material-symbols-outlined text-accent">check_circle</span><div><strong>Meta Ads</strong><span class="text-muted">Meta Ads, step by step — the skill that gets beginners paid fastest.</span></div></li>
+          </ul>
         </div>
         <!-- Week 4 -->
-        <div class="timeline-item">
-          <div class="timeline-item__marker">4</div>
-          <div class="timeline-item__body">
-            <h3 class="heading-md">Week 4 — Run it, measure it, get paid</h3>
-            <ul class="check-list">
-              <li><span class="material-symbols-outlined text-accent">check_circle</span><div><strong>Ad Results</strong><br><span class="text-muted">Launch and read your ad results.</span></div></li>
-              <li><span class="material-symbols-outlined text-accent">check_circle</span><div><strong>Analytics</strong><br><span class="text-muted">Understand your numbers with analytics.</span></div></li>
-              <li><span class="material-symbols-outlined text-accent">check_circle</span><div><strong>Capstone</strong><br><span class="text-muted">Capstone on a real business + how to find your first work.</span></div></li>
-            </ul>
+        <div class="timeline-card">
+          <div class="timeline-card__bg-num">04</div>
+          <div class="timeline-card__header">
+            <span class="timeline-card__badge">WEEK 4</span>
+            <h3 class="heading-md">Run it, measure it, get paid</h3>
           </div>
+          <ul class="check-list">
+            <li><span class="material-symbols-outlined text-accent">check_circle</span><div><strong>Ad Results</strong><span class="text-muted">Launch and read your ad results.</span></div></li>
+            <li><span class="material-symbols-outlined text-accent">check_circle</span><div><strong>Analytics</strong><span class="text-muted">Understand your numbers with analytics.</span></div></li>
+            <li><span class="material-symbols-outlined text-accent">check_circle</span><div><strong>Capstone</strong><span class="text-muted">Capstone on a real business + how to find your first work.</span></div></li>
+          </ul>
         </div>
       </div>
       <div class="container reveal-group" style="margin-top:48px;">
