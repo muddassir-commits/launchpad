@@ -695,6 +695,20 @@ ul,ol{list-style:none}
 
   .lightbox__prev,.lightbox__next{display:none}
 
+  .cta-pair {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  .cta-pair form {
+    width: 100% !important;
+  }
+  .cta-pair .razorpay-payment-button {
+    width: 100% !important;
+  }
+  .testimonial-card {
+    padding: 24px !important;
+  }
+
   /* Padding for sticky bar */
   main{padding-bottom:80px}
 }
@@ -979,6 +993,10 @@ ul,ol{list-style:none}
 
 .accordion__header:hover {
   color: var(--accent-dark);
+}
+
+.accordion__item.is-active {
+  border-color: var(--accent) !important;
 }
 
 .accordion__item.is-active .accordion__chevron {
@@ -1415,15 +1433,28 @@ ul,ol{list-style:none}
 }
 
 /* Responsiveness */
+@media(max-width: 768px) {
+  .chatbot-widget {
+    bottom: 96px !important; /* sit above sticky bottom mobile bar */
+  }
+  .chatbot-window {
+    bottom: 156px !important;
+  }
+}
 @media(max-width: 480px) {
   .chatbot-widget {
-    bottom: 16px;
+    bottom: 84px !important;
     right: 16px;
   }
   .chatbot-window {
-    width: 290px;
-    height: 440px;
-    bottom: 70px;
+    width: calc(100vw - 32px) !important;
+    height: 440px !important;
+    bottom: 144px !important;
+    right: 16px !important;
+  }
+  .toggle-btn {
+    padding: 8px 16px !important;
+    font-size: 12px !important;
   }
 }
 
@@ -1620,7 +1651,7 @@ ul,ol{list-style:none}
 
 .testimonial-slides {
   position: relative;
-  height: 280px;
+  height: 320px;
   overflow: hidden;
 }
 
@@ -1805,7 +1836,7 @@ ul,ol{list-style:none}
     margin-top: 8px;
   }
   .testimonial-slides {
-    height: 340px;
+    height: 400px;
   }
   .timeline-card {
     padding: 24px;
