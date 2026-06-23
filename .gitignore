@@ -22,3 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Raw images and scripts
+images/raw/
+generate_preview.js
+convert_heic_to_jpg.js
+optimize_images.js
+cleanup_raw_images.js
+preview.html
+
