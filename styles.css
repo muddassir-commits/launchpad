@@ -1054,3 +1054,36 @@ ul,ol{list-style:none}
     max-width: 260px;
   }
 }
+
+/* ---- Razorpay Custom styling ---- */
+.razorpay-payment-button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  letter-spacing: .05em !important;
+  text-transform: uppercase !important;
+  border: none !important;
+  border-radius: var(--r) !important;
+  cursor: pointer !important;
+  transition: all var(--t-med) var(--ease) !important;
+  background: var(--accent) !important;
+  color: #fff !important;
+  box-shadow: var(--shadow-btn) !important;
+  height: 56px !important;
+  padding: 0 32px !important;
+  min-width: 240px !important;
+}
+.pricing-card .razorpay-payment-button {
+  width: 100% !important;
+}
+.razorpay-payment-button:hover {
+  background: var(--accent-dark) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 12px 24px var(--accent-glow) !important;
+}
+.razorpay-payment-button:active {
+  transform: translateY(0) !important;
+}
