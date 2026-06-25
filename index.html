@@ -68,7 +68,13 @@
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
       </div>
-      <div class="nav__actions hide-mobile">
+      <div class="nav__actions hide-mobile" style="display: flex; align-items: center; gap: 12px;">
+        <a class="nav-support-icon nav-support-icon--call" href="tel:+918887620727" title="Call Muddassir for Queries">
+          <span class="material-symbols-outlined">phone</span>
+        </a>
+        <a class="nav-support-icon nav-support-icon--wa" href="https://wa.me/918887620727?text=Hi%20Muddassir,%20I%20have%20a%20query%20about%20the%20AI%20Marketing%20Launchpad" target="_blank" rel="noopener noreferrer" title="WhatsApp Muddassir for Queries">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.035-4.22c1.661.989 3.559 1.511 5.503 1.512 5.511 0 9.997-4.486 10.001-9.998.002-2.67-1.039-5.18-2.93-7.073-1.89-1.893-4.402-2.934-7.078-2.934-5.524 0-10.014 4.492-10.018 10.003-.002 1.957.51 3.867 1.488 5.539l-.999 3.648 3.734-.979zm11.305-6.85c-.302-.15-1.787-.882-2.057-.98-.27-.099-.467-.15-.662.15-.195.3-.755.952-.927 1.15-.172.2-.344.223-.646.073-.3-.15-1.269-.467-2.417-1.49-1.247-1.11-2.088-2.483-2.332-2.9-.244-.418-.026-.644.176-.843.18-.178.4-.467.6-.7.2-.234.266-.4.4-.667.133-.268.067-.5-.033-.7-.1-.2-.862-2.08-.862-2.08-.344-.827-.694-.716-.957-.73-.248-.013-.532-.016-.816-.016-.285 0-.748.107-1.14.534-.392.426-1.502 1.467-1.502 3.578s1.537 4.147 1.751 4.433c.215.285 3.025 4.62 7.327 6.479 1.023.442 1.822.707 2.443.904 1.03.328 1.968.281 2.71.17.828-.124 1.787-.73 2.039-1.401.25-.672.25-1.248.175-1.401-.075-.152-.27-.243-.573-.393z"/></svg>
+        </a>
         <a class="btn btn--primary btn--sm" href="#pricing">Secure My Seat</a>
       </div>
       <button class="nav__hamburger show-mobile-only" id="mobile-menu-btn" aria-label="Open menu">
@@ -82,12 +88,28 @@
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
       <a class="btn btn--primary btn--full" href="#pricing">Secure My Seat</a>
+      <div class="drawer-support-buttons" style="display: flex; gap: 12px; margin-top: 8px;">
+        <a class="btn btn--outline btn--full btn--support-call" href="tel:+918887620727">
+          <span class="material-symbols-outlined">phone</span> Call Support
+        </a>
+        <a class="btn btn--outline btn--full btn--support-wa" href="https://wa.me/918887620727?text=Hi%20Muddassir,%20I%20have%20a%20query%20about%20the%20AI%20Marketing%20Launchpad" target="_blank" rel="noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.035-4.22c1.661.989 3.559 1.511 5.503 1.512 5.511 0 9.997-4.486 10.001-9.998.002-2.67-1.039-5.18-2.93-7.073-1.89-1.893-4.402-2.934-7.078-2.934-5.524 0-10.014 4.492-10.018 10.003-.002 1.957.51 3.867 1.488 5.539l-.999 3.648 3.734-.979zm11.305-6.85c-.302-.15-1.787-.882-2.057-.98-.27-.099-.467-.15-.662.15-.195.3-.755.952-.927 1.15-.172.2-.344.223-.646.073-.3-.15-1.269-.467-2.417-1.49-1.247-1.11-2.088-2.483-2.332-2.9-.244-.418-.026-.644.176-.843.18-.178.4-.467.6-.7.2-.234.266-.4.4-.667.133-.268.067-.5-.033-.7-.1-.2-.862-2.08-.862-2.08-.344-.827-.694-.716-.957-.73-.248-.013-.532-.016-.816-.016-.285 0-.748.107-1.14.534-.392.426-1.502 1.467-1.502 3.578s1.537 4.147 1.751 4.433c.215.285 3.025 4.62 7.327 6.479 1.023.442 1.822.707 2.443.904 1.03.328 1.968.281 2.71.17.828-.124 1.787-.73 2.039-1.401.25-.672.25-1.248.175-1.401-.075-.152-.27-.243-.573-.393z"/></svg> WhatsApp Support
+        </a>
+      </div>
     </div>
   </nav>
 
   <!-- Sticky mobile bottom CTA -->
   <div class="sticky-bar show-mobile-only" id="sticky-bar">
-    <a class="btn btn--accent btn--full" href="#pricing">Secure My Seat — Join Cohort</a>
+    <div style="display: flex; gap: 8px; width: 100%;">
+      <a class="btn btn--accent" style="flex: 2; padding: 0 12px; font-size: 13px;" href="#pricing">Secure My Seat</a>
+      <a class="btn btn--outline btn--support-call" style="flex: 1; padding: 0; height: 48px;" href="tel:+918887620727" aria-label="Call Support">
+        <span class="material-symbols-outlined">phone</span>
+      </a>
+      <a class="btn btn--outline btn--support-wa" style="flex: 1; padding: 0; height: 48px;" href="https://wa.me/918887620727?text=Hi%20Muddassir,%20I%20have%20a%20query%20about%20the%20AI%20Marketing%20Launchpad" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Support">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: currentColor;"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.035-4.22c1.661.989 3.559 1.511 5.503 1.512 5.511 0 9.997-4.486 10.001-9.998.002-2.67-1.039-5.18-2.93-7.073-1.89-1.893-4.402-2.934-7.078-2.934-5.524 0-10.014 4.492-10.018 10.003-.002 1.957.51 3.867 1.488 5.539l-.999 3.648 3.734-.979zm11.305-6.85c-.302-.15-1.787-.882-2.057-.98-.27-.099-.467-.15-.662.15-.195.3-.755.952-.927 1.15-.172.2-.344.223-.646.073-.3-.15-1.269-.467-2.417-1.49-1.247-1.11-2.088-2.483-2.332-2.9-.244-.418-.026-.644.176-.843.18-.178.4-.467.6-.7.2-.234.266-.4.4-.667.133-.268.067-.5-.033-.7-.1-.2-.862-2.08-.862-2.08-.344-.827-.694-.716-.957-.73-.248-.013-.532-.016-.816-.016-.285 0-.748.107-1.14.534-.392.426-1.502 1.467-1.502 3.578s1.537 4.147 1.751 4.433c.215.285 3.025 4.62 7.327 6.479 1.023.442 1.822.707 2.443.904 1.03.328 1.968.281 2.71.17.828-.124 1.787-.73 2.039-1.401.25-.672.25-1.248.175-1.401-.075-.152-.27-.243-.573-.393z"/></svg>
+      </a>
+    </div>
   </div>
 
   <main>
@@ -112,7 +134,17 @@
           </p>
 
           <div class="hero__cta-group">
-            <a class="btn btn--accent btn--lg" href="#pricing">Claim Your Seat — Live Batch</a>
+            <div class="cta-actions-wrap">
+              <a class="btn btn--accent btn--lg" href="#pricing">Claim Your Seat — Live Batch</a>
+              <div class="cta-support-row">
+                <a class="btn btn--outline btn--lg btn--support-call" href="tel:+918887620727">
+                  <span class="material-symbols-outlined">phone</span> Call Support
+                </a>
+                <a class="btn btn--outline btn--lg btn--support-wa" href="https://wa.me/918887620727?text=Hi%20Muddassir,%20I%20have%20a%20query%20about%20the%20AI%20Marketing%20Launchpad" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.035-4.22c1.661.989 3.559 1.511 5.503 1.512 5.511 0 9.997-4.486 10.001-9.998.002-2.67-1.039-5.18-2.93-7.073-1.89-1.893-4.402-2.934-7.078-2.934-5.524 0-10.014 4.492-10.018 10.003-.002 1.957.51 3.867 1.488 5.539l-.999 3.648 3.734-.979zm11.305-6.85c-.302-.15-1.787-.882-2.057-.98-.27-.099-.467-.15-.662.15-.195.3-.755.952-.927 1.15-.172.2-.344.223-.646.073-.3-.15-1.269-.467-2.417-1.49-1.247-1.11-2.088-2.483-2.332-2.9-.244-.418-.026-.644.176-.843.18-.178.4-.467.6-.7.2-.234.266-.4.4-.667.133-.268.067-.5-.033-.7-.1-.2-.862-2.08-.862-2.08-.344-.827-.694-.716-.957-.73-.248-.013-.532-.016-.816-.016-.285 0-.748.107-1.14.534-.392.426-1.502 1.467-1.502 3.578s1.537 4.147 1.751 4.433c.215.285 3.025 4.62 7.327 6.479 1.023.442 1.822.707 2.443.904 1.03.328 1.968.281 2.71.17.828-.124 1.787-.73 2.039-1.401.25-.672.25-1.248.175-1.401-.075-.152-.27-.243-.573-.393z"/></svg> WhatsApp Support
+                </a>
+              </div>
+            </div>
             <p class="hero__schedule">
               <span class="material-symbols-outlined">calendar_month</span> Mon / Wed / Fri
               <span class="sep">·</span>
@@ -176,7 +208,17 @@
             None of that is your fault. No one ever sat you down and showed you the path, step by step, in plain language, from the very beginning. That is exactly what this course is.
           </p>
           <div class="problem-cta-container">
-            <a class="btn btn--accent btn--lg" href="#pricing">Start Learning Now</a>
+            <div class="cta-actions-wrap">
+              <a class="btn btn--accent btn--lg" href="#pricing">Start Learning Now</a>
+              <div class="cta-support-row">
+                <a class="btn btn--outline btn--lg btn--support-call" href="tel:+918887620727">
+                  <span class="material-symbols-outlined">phone</span> Call Support
+                </a>
+                <a class="btn btn--outline btn--lg btn--support-wa" href="https://wa.me/918887620727?text=Hi%20Muddassir,%20I%20have%20a%20query%20about%20the%20AI%20Marketing%20Launchpad" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.035-4.22c1.661.989 3.559 1.511 5.503 1.512 5.511 0 9.997-4.486 10.001-9.998.002-2.67-1.039-5.18-2.93-7.073-1.89-1.893-4.402-2.934-7.078-2.934-5.524 0-10.014 4.492-10.018 10.003-.002 1.957.51 3.867 1.488 5.539l-.999 3.648 3.734-.979zm11.305-6.85c-.302-.15-1.787-.882-2.057-.98-.27-.099-.467-.15-.662.15-.195.3-.755.952-.927 1.15-.172.2-.344.223-.646.073-.3-.15-1.269-.467-2.417-1.49-1.247-1.11-2.088-2.483-2.332-2.9-.244-.418-.026-.644.176-.843.18-.178.4-.467.6-.7.2-.234.266-.4.4-.667.133-.268.067-.5-.033-.7-.1-.2-.862-2.08-.862-2.08-.344-.827-.694-.716-.957-.73-.248-.013-.532-.016-.816-.016-.285 0-.748.107-1.14.534-.392.426-1.502 1.467-1.502 3.578s1.537 4.147 1.751 4.433c.215.285 3.025 4.62 7.327 6.479 1.023.442 1.822.707 2.443.904 1.03.328 1.968.281 2.71.17.828-.124 1.787-.73 2.039-1.401.25-.672.25-1.248.175-1.401-.075-.152-.27-.243-.573-.393z"/></svg> WhatsApp Support
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -249,7 +291,17 @@
       </div>
       <div class="container text-center reveal-group" style="margin-top:40px;">
         <div class="cta-wrap">
-          <a class="btn btn--primary btn--lg" href="#pricing">Enroll Today — Join Live</a>
+          <div class="cta-actions-wrap mx-auto">
+            <a class="btn btn--primary btn--lg" href="#pricing">Enroll Today — Join Live</a>
+            <div class="cta-support-row">
+              <a class="btn btn--outline btn--lg btn--support-call" href="tel:+918887620727">
+                <span class="material-symbols-outlined">phone</span> Call Support
+              </a>
+              <a class="btn btn--outline btn--lg btn--support-wa" href="https://wa.me/918887620727?text=Hi%20Muddassir,%20I%20have%20a%20query%20about%20the%20AI%20Marketing%20Launchpad" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.035-4.22c1.661.989 3.559 1.511 5.503 1.512 5.511 0 9.997-4.486 10.001-9.998.002-2.67-1.039-5.18-2.93-7.073-1.89-1.893-4.402-2.934-7.078-2.934-5.524 0-10.014 4.492-10.018 10.003-.002 1.957.51 3.867 1.488 5.539l-.999 3.648 3.734-.979zm11.305-6.85c-.302-.15-1.787-.882-2.057-.98-.27-.099-.467-.15-.662.15-.195.3-.755.952-.927 1.15-.172.2-.344.223-.646.073-.3-.15-1.269-.467-2.417-1.49-1.247-1.11-2.088-2.483-2.332-2.9-.244-.418-.026-.644.176-.843.18-.178.4-.467.6-.7.2-.234.266-.4.4-.667.133-.268.067-.5-.033-.7-.1-.2-.862-2.08-.862-2.08-.344-.827-.694-.716-.957-.73-.248-.013-.532-.016-.816-.016-.285 0-.748.107-1.14.534-.392.426-1.502 1.467-1.502 3.578s1.537 4.147 1.751 4.433c.215.285 3.025 4.62 7.327 6.479 1.023.442 1.822.707 2.443.904 1.03.328 1.968.281 2.71.17.828-.124 1.787-.73 2.039-1.401.25-.672.25-1.248.175-1.401-.075-.152-.27-.243-.573-.393z"/></svg> WhatsApp Support
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -335,7 +387,17 @@
           You do not need to be an expert. You do not need money to spend on tools. You just need to show up for 30 days and do the work alongside everyone else.
         </p>
         <div class="cta-wrap" style="margin-top:32px;">
-          <a class="btn btn--accent btn--lg" href="#pricing">Secure My Seat — Join Live</a>
+          <div class="cta-actions-wrap mx-auto">
+            <a class="btn btn--accent btn--lg" href="#pricing">Secure My Seat — Join Live</a>
+            <div class="cta-support-row">
+              <a class="btn btn--outline btn--lg btn--support-call" href="tel:+918887620727">
+                <span class="material-symbols-outlined">phone</span> Call Support
+              </a>
+              <a class="btn btn--outline btn--lg btn--support-wa" href="https://wa.me/918887620727?text=Hi%20Muddassir,%20I%20have%20a%20query%20about%20the%20AI%20Marketing%20Launchpad" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.035-4.22c1.661.989 3.559 1.511 5.503 1.512 5.511 0 9.997-4.486 10.001-9.998.002-2.67-1.039-5.18-2.93-7.073-1.89-1.893-4.402-2.934-7.078-2.934-5.524 0-10.014 4.492-10.018 10.003-.002 1.957.51 3.867 1.488 5.539l-.999 3.648 3.734-.979zm11.305-6.85c-.302-.15-1.787-.882-2.057-.98-.27-.099-.467-.15-.662.15-.195.3-.755.952-.927 1.15-.172.2-.344.223-.646.073-.3-.15-1.269-.467-2.417-1.49-1.247-1.11-2.088-2.483-2.332-2.9-.244-.418-.026-.644.176-.843.18-.178.4-.467.6-.7.2-.234.266-.4.4-.667.133-.268.067-.5-.033-.7-.1-.2-.862-2.08-.862-2.08-.344-.827-.694-.716-.957-.73-.248-.013-.532-.016-.816-.016-.285 0-.748.107-1.14.534-.392.426-1.502 1.467-1.502 3.578s1.537 4.147 1.751 4.433c.215.285 3.025 4.62 7.327 6.479 1.023.442 1.822.707 2.443.904 1.03.328 1.968.281 2.71.17.828-.124 1.787-.73 2.039-1.401.25-.672.25-1.248.175-1.401-.075-.152-.27-.243-.573-.393z"/></svg> WhatsApp Support
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -413,7 +475,17 @@
         </div>
       </div>
       <div class="container text-center" style="margin-top:48px;">
-        <a class="btn btn--accent btn--lg" href="#pricing">Claim Your Seat — Live Batch</a>
+        <div class="cta-actions-wrap mx-auto">
+          <a class="btn btn--accent btn--lg" href="#pricing">Claim Your Seat — Live Batch</a>
+          <div class="cta-support-row">
+            <a class="btn btn--outline btn--lg btn--support-call" href="tel:+918887620727">
+              <span class="material-symbols-outlined">phone</span> Call Support
+            </a>
+            <a class="btn btn--outline btn--lg btn--support-wa" href="https://wa.me/918887620727?text=Hi%20Muddassir,%20I%20have%20a%20query%20about%20the%20AI%20Marketing%20Launchpad" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.035-4.22c1.661.989 3.559 1.511 5.503 1.512 5.511 0 9.997-4.486 10.001-9.998.002-2.67-1.039-5.18-2.93-7.073-1.89-1.893-4.402-2.934-7.078-2.934-5.524 0-10.014 4.492-10.018 10.003-.002 1.957.51 3.867 1.488 5.539l-.999 3.648 3.734-.979zm11.305-6.85c-.302-.15-1.787-.882-2.057-.98-.27-.099-.467-.15-.662.15-.195.3-.755.952-.927 1.15-.172.2-.344.223-.646.073-.3-.15-1.269-.467-2.417-1.49-1.247-1.11-2.088-2.483-2.332-2.9-.244-.418-.026-.644.176-.843.18-.178.4-.467.6-.7.2-.234.266-.4.4-.667.133-.268.067-.5-.033-.7-.1-.2-.862-2.08-.862-2.08-.344-.827-.694-.716-.957-.73-.248-.013-.532-.016-.816-.016-.285 0-.748.107-1.14.534-.392.426-1.502 1.467-1.502 3.578s1.537 4.147 1.751 4.433c.215.285 3.025 4.62 7.327 6.479 1.023.442 1.822.707 2.443.904 1.03.328 1.968.281 2.71.17.828-.124 1.787-.73 2.039-1.401.25-.672.25-1.248.175-1.401-.075-.152-.27-.243-.573-.393z"/></svg> WhatsApp Support
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -631,7 +703,17 @@
               </div>
             </div>
             
-            <a class="btn btn--accent btn--lg btn--full" href="#pricing">Secure My Seat — Join Cohort</a>
+            <div class="cta-actions-wrap cta-actions-wrap--calculator" style="margin-top: 24px; width: 100%;">
+              <a class="btn btn--accent btn--lg btn--full" href="#pricing">Secure My Seat — Join Cohort</a>
+              <div class="cta-support-row">
+                <a class="btn btn--outline btn--lg btn--full btn--support-call" href="tel:+918887620727">
+                  <span class="material-symbols-outlined">phone</span> Call Support
+                </a>
+                <a class="btn btn--outline btn--lg btn--full btn--support-wa" href="https://wa.me/918887620727?text=Hi%20Muddassir,%20I%20have%20a%20query%20about%20the%20AI%20Marketing%20Launchpad" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.035-4.22c1.661.989 3.559 1.511 5.503 1.512 5.511 0 9.997-4.486 10.001-9.998.002-2.67-1.039-5.18-2.93-7.073-1.89-1.893-4.402-2.934-7.078-2.934-5.524 0-10.014 4.492-10.018 10.003-.002 1.957.51 3.867 1.488 5.539l-.999 3.648 3.734-.979zm11.305-6.85c-.302-.15-1.787-.882-2.057-.98-.27-.099-.467-.15-.662.15-.195.3-.755.952-.927 1.15-.172.2-.344.223-.646.073-.3-.15-1.269-.467-2.417-1.49-1.247-1.11-2.088-2.483-2.332-2.9-.244-.418-.026-.644.176-.843.18-.178.4-.467.6-.7.2-.234.266-.4.4-.667.133-.268.067-.5-.033-.7-.1-.2-.862-2.08-.862-2.08-.344-.827-.694-.716-.957-.73-.248-.013-.532-.016-.816-.016-.285 0-.748.107-1.14.534-.392.426-1.502 1.467-1.502 3.578s1.537 4.147 1.751 4.433c.215.285 3.025 4.62 7.327 6.479 1.023.442 1.822.707 2.443.904 1.03.328 1.968.281 2.71.17.828-.124 1.787-.73 2.039-1.401.25-.672.25-1.248.175-1.401-.075-.152-.27-.243-.573-.393z"/></svg> WhatsApp Support
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -679,6 +761,16 @@
             <div class="pricing-plan-view" id="checkout-split" style="display: none;">
               <a class="btn btn--accent btn--lg btn--full" href="https://wa.me/918887620727?text=Hi%20Muddassir,%20I'm%20interested%20in%20joining%20the%20AI%20Marketing%20Launchpad%20using%20the%202-Month%20Split%20Payment%20plan%20(2%20x%20%E2%82%B91,650).%20Please%20help%20me%20set%20up%20my%20split%20billing!" target="_blank" rel="noopener noreferrer">Setup Split Plan on WhatsApp</a>
             </div>
+            
+            <!-- Support Call & WA under checkout buttons -->
+            <div class="cta-support-row" style="margin-top: 16px;">
+              <a class="btn btn--outline btn--lg btn--full btn--support-call" href="tel:+918887620727">
+                <span class="material-symbols-outlined">phone</span> Call Support
+              </a>
+              <a class="btn btn--outline btn--lg btn--full btn--support-wa" href="https://wa.me/918887620727?text=Hi%20Muddassir,%20I%20have%20a%20query%20about%20the%20AI%20Marketing%20Launchpad" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.035-4.22c1.661.989 3.559 1.511 5.503 1.512 5.511 0 9.997-4.486 10.001-9.998.002-2.67-1.039-5.18-2.93-7.073-1.89-1.893-4.402-2.934-7.078-2.934-5.524 0-10.014 4.492-10.018 10.003-.002 1.957.51 3.867 1.488 5.539l-.999 3.648 3.734-.979zm11.305-6.85c-.302-.15-1.787-.882-2.057-.98-.27-.099-.467-.15-.662.15-.195.3-.755.952-.927 1.15-.172.2-.344.223-.646.073-.3-.15-1.269-.467-2.417-1.49-1.247-1.11-2.088-2.483-2.332-2.9-.244-.418-.026-.644.176-.843.18-.178.4-.467.6-.7.2-.234.266-.4.4-.667.133-.268.067-.5-.033-.7-.1-.2-.862-2.08-.862-2.08-.344-.827-.694-.716-.957-.73-.248-.013-.532-.016-.816-.016-.285 0-.748.107-1.14.534-.392.426-1.502 1.467-1.502 3.578s1.537 4.147 1.751 4.433c.215.285 3.025 4.62 7.327 6.479 1.023.442 1.822.707 2.443.904 1.03.328 1.968.281 2.71.17.828-.124 1.787-.73 2.039-1.401.25-.672.25-1.248.175-1.401-.075-.152-.27-.243-.573-.393z"/></svg> WhatsApp Support
+              </a>
+            </div>
           </div>
           
           <p class="body-sm text-muted text-center" style="margin-top:16px;">
@@ -718,7 +810,17 @@
         </div>
       </div>
       <div class="container text-center" style="margin-top:48px;">
-        <a class="btn btn--accent btn--lg" href="#pricing">Claim Your Spot Now</a>
+        <div class="cta-actions-wrap mx-auto">
+          <a class="btn btn--accent btn--lg" href="#pricing">Claim Your Spot Now</a>
+          <div class="cta-support-row">
+            <a class="btn btn--outline btn--lg btn--support-call" href="tel:+918887620727">
+              <span class="material-symbols-outlined">phone</span> Call Support
+            </a>
+            <a class="btn btn--outline btn--lg btn--support-wa" href="https://wa.me/918887620727?text=Hi%20Muddassir,%20I%20have%20a%20query%20about%20the%20AI%20Marketing%20Launchpad" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.035-4.22c1.661.989 3.559 1.511 5.503 1.512 5.511 0 9.997-4.486 10.001-9.998.002-2.67-1.039-5.18-2.93-7.073-1.89-1.893-4.402-2.934-7.078-2.934-5.524 0-10.014 4.492-10.018 10.003-.002 1.957.51 3.867 1.488 5.539l-.999 3.648 3.734-.979zm11.305-6.85c-.302-.15-1.787-.882-2.057-.98-.27-.099-.467-.15-.662.15-.195.3-.755.952-.927 1.15-.172.2-.344.223-.646.073-.3-.15-1.269-.467-2.417-1.49-1.247-1.11-2.088-2.483-2.332-2.9-.244-.418-.026-.644.176-.843.18-.178.4-.467.6-.7.2-.234.266-.4.4-.667.133-.268.067-.5-.033-.7-.1-.2-.862-2.08-.862-2.08-.344-.827-.694-.716-.957-.73-.248-.013-.532-.016-.816-.016-.285 0-.748.107-1.14.534-.392.426-1.502 1.467-1.502 3.578s1.537 4.147 1.751 4.433c.215.285 3.025 4.62 7.327 6.479 1.023.442 1.822.707 2.443.904 1.03.328 1.968.281 2.71.17.828-.124 1.787-.73 2.039-1.401.25-.672.25-1.248.175-1.401-.075-.152-.27-.243-.573-.393z"/></svg> WhatsApp Support
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -874,9 +976,16 @@
           <p class="body-lg text-muted">
             If you have been waiting for a sign to finally start — to learn something that is truly yours, that you can use anywhere — this is it. Thirty days from now, you could be looking back at the moment you began. Let's build your AI digital marketing future together.
           </p>
-          <div class="cta-pair">
+          <div class="cta-pair cta-actions-wrap" style="align-items: flex-start;">
             <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_T52bsussQqGlNY" async> </script> </form>
-            <a class="btn btn--outline btn--lg" href="https://wa.me/918887620727" target="_blank" rel="noopener noreferrer">Message on WhatsApp</a>
+            <div class="cta-support-row">
+              <a class="btn btn--outline btn--lg btn--support-call" href="tel:+918887620727">
+                <span class="material-symbols-outlined">phone</span> Call Support
+              </a>
+              <a class="btn btn--outline btn--lg btn--support-wa" href="https://wa.me/918887620727?text=Hi%20Muddassir,%20I%20have%20a%20query%20about%20the%20AI%20Marketing%20Launchpad" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.035-4.22c1.661.989 3.559 1.511 5.503 1.512 5.511 0 9.997-4.486 10.001-9.998.002-2.67-1.039-5.18-2.93-7.073-1.89-1.893-4.402-2.934-7.078-2.934-5.524 0-10.014 4.492-10.018 10.003-.002 1.957.51 3.867 1.488 5.539l-.999 3.648 3.734-.979zm11.305-6.85c-.302-.15-1.787-.882-2.057-.98-.27-.099-.467-.15-.662.15-.195.3-.755.952-.927 1.15-.172.2-.344.223-.646.073-.3-.15-1.269-.467-2.417-1.49-1.247-1.11-2.088-2.483-2.332-2.9-.244-.418-.026-.644.176-.843.18-.178.4-.467.6-.7.2-.234.266-.4.4-.667.133-.268.067-.5-.033-.7-.1-.2-.862-2.08-.862-2.08-.344-.827-.694-.716-.957-.73-.248-.013-.532-.016-.816-.016-.285 0-.748.107-1.14.534-.392.426-1.502 1.467-1.502 3.578s1.537 4.147 1.751 4.433c.215.285 3.025 4.62 7.327 6.479 1.023.442 1.822.707 2.443.904 1.03.328 1.968.281 2.71.17.828-.124 1.787-.73 2.039-1.401.25-.672.25-1.248.175-1.401-.075-.152-.27-.243-.573-.393z"/></svg> WhatsApp Support
+              </a>
+            </div>
           </div>
         </div>
       </div>

@@ -246,6 +246,127 @@ ul,ol{list-style:none}
 }
 @keyframes ripple{to{transform:scale(2.5);opacity:0}}
 
+/* Support Query Buttons & Wrappers */
+.cta-actions-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.cta-support-row {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  justify-content: center;
+}
+
+.cta-support-row .btn,
+.drawer-support-buttons .btn {
+  flex: 1;
+  font-size: 13px;
+  height: 48px;
+  gap: 8px;
+  padding: 0 16px;
+  white-space: nowrap;
+}
+
+.btn--support-call {
+  background: var(--surface-card);
+  color: var(--on-surface-variant);
+  border: 1px solid var(--surface-variant) !important;
+}
+
+.btn--support-call:hover {
+  border-color: var(--accent) !important;
+  color: var(--accent);
+  background: rgba(0, 209, 255, 0.04);
+}
+
+.btn--support-wa {
+  background: var(--surface-card);
+  color: var(--on-surface-variant);
+  border: 1px solid var(--surface-variant) !important;
+}
+
+.btn--support-wa:hover {
+  border-color: #25D366 !important;
+  color: #25D366;
+  background: rgba(37, 211, 102, 0.04);
+}
+
+.btn--support-wa svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+/* Navbar Support Icons */
+.nav-support-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  color: var(--on-surface-variant);
+  border: 1px solid var(--surface-variant);
+  transition: all var(--t-fast) var(--ease);
+}
+
+.nav-support-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.nav-support-icon .material-symbols-outlined {
+  font-size: 20px;
+}
+
+.nav-support-icon--call:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(0, 209, 255, 0.05);
+}
+
+.nav-support-icon--wa:hover {
+  border-color: #25D366;
+  color: #25D366;
+  background: rgba(37, 211, 102, 0.05);
+}
+
+/* Media Queries for Support Buttons Layouts */
+@media (min-width: 769px) {
+  .cta-actions-wrap {
+    flex-direction: row;
+    justify-content: center;
+    width: auto;
+  }
+  .cta-support-row {
+    width: auto;
+  }
+  .cta-support-row .btn {
+    flex-grow: 0;
+    min-width: 170px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-actions-wrap {
+    width: 100%;
+  }
+  .cta-support-row {
+    flex-direction: row;
+    width: 100%;
+  }
+  .cta-actions-wrap .btn--lg {
+    width: 100%;
+  }
+}
+
+
 /* ================================================================
    HERO
    ================================================================ */
