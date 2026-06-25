@@ -209,6 +209,7 @@ ul,ol{list-style:none}
   border:none;border-radius:var(--r);
   cursor:pointer;transition:all var(--t-med) var(--ease);
   position:relative;overflow:hidden;
+  white-space:nowrap;
 }
 .btn--sm{height:40px;padding:0 24px}
 .btn--lg{height:56px;padding:0 32px;font-size:14px;border-radius:var(--r)}
@@ -366,6 +367,37 @@ ul,ol{list-style:none}
   }
 }
 
+/* Stacked variation for narrow layouts */
+.cta-actions-wrap--stacked {
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  width: 100% !important;
+}
+
+.cta-actions-wrap--stacked .cta-support-row {
+  width: 100% !important;
+  max-width: 400px;
+  justify-content: flex-start !important;
+}
+
+.cta-actions-wrap--stacked .btn--lg {
+  width: 100% !important;
+  max-width: 400px;
+}
+
+/* Calculator specific overrides */
+.cta-actions-wrap--calculator {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  width: 100% !important;
+}
+
+.cta-actions-wrap--calculator .cta-support-row {
+  width: 100% !important;
+  justify-content: center !important;
+}
+
+
 
 /* ================================================================
    HERO
@@ -435,7 +467,7 @@ ul,ol{list-style:none}
    PAIN POINTS — BENTO GRID
    ================================================================ */
 .bento-grid{
-  display:grid;grid-template-columns:1.2fr 0.9fr 1.1fr;
+  display:grid;grid-template-columns:1.1fr 1fr 1.1fr;
   gap:32px;align-items:center;
 }
 .bento-grid__left{padding-right:0}
