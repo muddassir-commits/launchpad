@@ -331,7 +331,7 @@ document.addEventListener('DOMContentLoaded', () => {
     revenueDisplay.textContent = '₹' + monthlyRevenue.toLocaleString('en-IN');
     
     // Payback period
-    const courseFee = 2999;
+    const courseFee = 1999;
     const paybackDays = Math.ceil((courseFee / monthlyRevenue) * 30);
     paybackDisplay.textContent = paybackDays + (paybackDays === 1 ? ' Day' : ' Days');
     
@@ -493,7 +493,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let response = "";
     
     if (q.includes('price') || q.includes('fee') || q.includes('cost') || q.includes('pay') || q.includes('rupees') || q.includes('money') || q.includes('amount') || q.includes('charges')) {
-      response = "The course investment is a single payment of <strong>₹2,999</strong>, which includes all 12 live classes, templates, community access, and a completion certificate. There are no hidden fees or paid tools required.";
+      response = "The course investment is normally ₹2,999, but we are running a **Special First Launch Offer for just ₹1,999** (₹1,000 Off!). This includes all 12 live classes, templates, community access, and a completion certificate. There are no hidden fees or paid tools required.";
     } else if (q.includes('live') || q.includes('recorded') || q.includes('recording') || q.includes('miss')) {
       response = "All classes are <strong>100% live</strong> (never pre-recorded) to keep you focused. If you miss a class, you will receive short written notes, and you can ask questions directly in the next live session.";
     } else if (q.includes('time') || q.includes('schedule') || q.includes('when') || q.includes('date') || q.includes('days') || q.includes('calendar')) {
@@ -631,6 +631,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const planSplitBtn = document.getElementById('plan-split');
   const pricingDisplayAmount = document.getElementById('pricing-display-amount');
   const pricingDisplayLabel = document.getElementById('pricing-display-label');
+  const pricingOriginalAmount = document.getElementById('pricing-original-amount');
+  const pricingDiscountBadge = document.getElementById('pricing-discount-badge');
   const checkoutOneTime = document.getElementById('checkout-one-time');
   const checkoutSplit = document.getElementById('checkout-split');
 
@@ -638,7 +640,9 @@ document.addEventListener('DOMContentLoaded', () => {
     planOneTimeBtn.addEventListener('click', () => {
       planOneTimeBtn.classList.add('active');
       planSplitBtn.classList.remove('active');
-      if (pricingDisplayAmount) pricingDisplayAmount.textContent = '₹2,999';
+      if (pricingDisplayAmount) pricingDisplayAmount.textContent = '₹1,999';
+      if (pricingOriginalAmount) pricingOriginalAmount.textContent = '₹2,999';
+      if (pricingDiscountBadge) pricingDiscountBadge.textContent = '🚀 First Launch Offer — ₹1,000 Off';
       if (pricingDisplayLabel) pricingDisplayLabel.textContent = 'Full 30-day live program';
       if (checkoutOneTime) checkoutOneTime.style.display = 'block';
       if (checkoutSplit) checkoutSplit.style.display = 'none';
@@ -647,8 +651,10 @@ document.addEventListener('DOMContentLoaded', () => {
     planSplitBtn.addEventListener('click', () => {
       planSplitBtn.classList.add('active');
       planOneTimeBtn.classList.remove('active');
-      if (pricingDisplayAmount) pricingDisplayAmount.textContent = '₹1,650';
-      if (pricingDisplayLabel) pricingDisplayLabel.textContent = 'Paid monthly for 2 months';
+      if (pricingDisplayAmount) pricingDisplayAmount.textContent = '₹1,100';
+      if (pricingOriginalAmount) pricingOriginalAmount.textContent = '₹1,650';
+      if (pricingDiscountBadge) pricingDiscountBadge.textContent = '🚀 First Launch Offer — Save ₹1,100';
+      if (pricingDisplayLabel) pricingDisplayLabel.textContent = 'Paid monthly for 2 months (Total ₹2,200)';
       if (checkoutOneTime) checkoutOneTime.style.display = 'none';
       if (checkoutSplit) checkoutSplit.style.display = 'block';
     });
