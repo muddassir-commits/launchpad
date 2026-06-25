@@ -651,10 +651,10 @@ document.addEventListener('DOMContentLoaded', () => {
     planSplitBtn.addEventListener('click', () => {
       planSplitBtn.classList.add('active');
       planOneTimeBtn.classList.remove('active');
-      if (pricingDisplayAmount) pricingDisplayAmount.textContent = '₹1,100';
-      if (pricingOriginalAmount) pricingOriginalAmount.textContent = '₹1,650';
-      if (pricingDiscountBadge) pricingDiscountBadge.textContent = '🚀 First Launch Offer — Save ₹1,100';
-      if (pricingDisplayLabel) pricingDisplayLabel.textContent = 'Paid monthly for 2 months (Total ₹2,200)';
+      if (pricingDisplayAmount) pricingDisplayAmount.textContent = '₹1,000';
+      if (pricingOriginalAmount) pricingOriginalAmount.textContent = '₹1,500';
+      if (pricingDiscountBadge) pricingDiscountBadge.textContent = '🚀 First Launch Offer — Save ₹1,000';
+      if (pricingDisplayLabel) pricingDisplayLabel.textContent = 'Pay ₹1,000 now, and the remaining ₹999 within 15 days';
       if (checkoutOneTime) checkoutOneTime.style.display = 'none';
       if (checkoutSplit) checkoutSplit.style.display = 'block';
     });
